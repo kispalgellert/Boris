@@ -7,6 +7,8 @@
 //
 
 #import "ExibitViewController.h"
+#import "MapsPageViewController.h"
+
 
 @interface ExibitViewController ()
 
@@ -35,7 +37,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)ExibitBackButtonTouch:(id)sender {
-    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    //[self.navigationController popToViewController:[self.navigationController parentViewController] animated:YES];
+
 }
 
 @end

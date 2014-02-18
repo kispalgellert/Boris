@@ -20,13 +20,15 @@
 {
     [super viewDidLoad];
     NSLog(@"In Maps view controller");
-    MapsBackButton = (UIButton*) self.editButtonItem;
+
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (IBAction)MapsBackButtonPressed:(id)sender {
     NSLog(@"maps back button pressed");
-    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
+    //[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
+    [self.navigationController popToViewController:[self.navigationController topViewController] animated:YES];
 }
+
 @end

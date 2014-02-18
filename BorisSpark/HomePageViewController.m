@@ -7,6 +7,7 @@
 //
 
 #import "HomePageViewController.h"
+#import "MapsPageViewController.h"
 
 @interface HomePageViewController ()
 
@@ -18,7 +19,7 @@
 {
     [super viewDidLoad];
     NSLog(@"asdasdasd");
-    [self.navigationController setNavigationBarHidden:YES];
+    //[self.navigationController setNavigationBarHidden:YES];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,5 +29,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)ViewMapPressed:(id)sender {
+
+}
 
 @end

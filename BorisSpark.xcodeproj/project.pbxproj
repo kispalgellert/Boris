@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */; };
+		891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CFA18B3F35B0034A2B6 /* UIImage+ImageEffects.m */; };
+		891B7D2218B3F4630034A2B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2118B3F4630034A2B6 /* ViewController.m */; };
+		891B7D2418B3F4ED0034A2B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891B7D2318B3F4ED0034A2B6 /* Images.xcassets */; };
 		893A550818A30E5800488316 /* ExibitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A550718A30E5800488316 /* ExibitViewController.m */; };
 		89ED45A5189A27F9005E3A17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A4189A27F9005E3A17 /* Foundation.framework */; };
 		89ED45A7189A27F9005E3A17 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A6189A27F9005E3A17 /* CoreGraphics.framework */; };
@@ -17,7 +21,6 @@
 		89ED45B8189A27F9005E3A17 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89ED45B6189A27F9005E3A17 /* Main_iPhone.storyboard */; };
 		89ED45BB189A27F9005E3A17 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89ED45B9189A27F9005E3A17 /* Main_iPad.storyboard */; };
 		89ED45BE189A27F9005E3A17 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ED45BD189A27F9005E3A17 /* HomePageViewController.m */; };
-		89ED45C0189A27F9005E3A17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89ED45BF189A27F9005E3A17 /* Images.xcassets */; };
 		89ED45C7189A27F9005E3A17 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45C6189A27F9005E3A17 /* XCTest.framework */; };
 		89ED45C8189A27F9005E3A17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A4189A27F9005E3A17 /* Foundation.framework */; };
 		89ED45C9189A27F9005E3A17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A8189A27F9005E3A17 /* UIKit.framework */; };
@@ -37,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		891B7CF718B3F35B0034A2B6 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
+		891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
+		891B7CF918B3F35B0034A2B6 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		891B7CFA18B3F35B0034A2B6 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		891B7D2018B3F4630034A2B6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		891B7D2118B3F4630034A2B6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		891B7D2318B3F4ED0034A2B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		893A550618A30E5800488316 /* ExibitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExibitViewController.h; sourceTree = "<group>"; };
 		893A550718A30E5800488316 /* ExibitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExibitViewController.m; sourceTree = "<group>"; };
 		89ED45A1189A27F9005E3A17 /* BorisSpark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BorisSpark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +63,6 @@
 		89ED45BA189A27F9005E3A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		89ED45BC189A27F9005E3A17 /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
 		89ED45BD189A27F9005E3A17 /* HomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
-		89ED45BF189A27F9005E3A17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89ED45C5189A27F9005E3A17 /* BorisSparkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BorisSparkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89ED45C6189A27F9005E3A17 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		89ED45CE189A27F9005E3A17 /* BorisSparkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BorisSparkTests-Info.plist"; sourceTree = "<group>"; };
@@ -87,6 +96,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		891B7CF618B3F35B0034A2B6 /* BTGlassScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				891B7D2318B3F4ED0034A2B6 /* Images.xcassets */,
+				891B7D2018B3F4630034A2B6 /* ViewController.h */,
+				891B7D2118B3F4630034A2B6 /* ViewController.m */,
+				891B7CF718B3F35B0034A2B6 /* BTGlassScrollView.h */,
+				891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */,
+				891B7CF918B3F35B0034A2B6 /* UIImage+ImageEffects.h */,
+				891B7CFA18B3F35B0034A2B6 /* UIImage+ImageEffects.m */,
+			);
+			path = BTGlassScrollView;
+			sourceTree = "<group>";
+		};
 		89ED4598189A27F8005E3A17 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +143,7 @@
 		89ED45AA189A27F9005E3A17 /* BorisSpark */ = {
 			isa = PBXGroup;
 			children = (
+				891B7CF618B3F35B0034A2B6 /* BTGlassScrollView */,
 				89ED45B3189A27F9005E3A17 /* AppDelegate.h */,
 				89ED45B4189A27F9005E3A17 /* AppDelegate.m */,
 				89ED45B6189A27F9005E3A17 /* Main_iPhone.storyboard */,
@@ -128,7 +152,6 @@
 				89ED45B9189A27F9005E3A17 /* Main_iPad.storyboard */,
 				89ED45BC189A27F9005E3A17 /* HomePageViewController.h */,
 				89ED45BD189A27F9005E3A17 /* HomePageViewController.m */,
-				89ED45BF189A27F9005E3A17 /* Images.xcassets */,
 				89ED45AB189A27F9005E3A17 /* Supporting Files */,
 				89ED45DC189A35AB005E3A17 /* MapsPageViewController.h */,
 				89ED45DD189A35AB005E3A17 /* MapsPageViewController.m */,
@@ -245,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89ED45BB189A27F9005E3A17 /* Main_iPad.storyboard in Resources */,
-				89ED45C0189A27F9005E3A17 /* Images.xcassets in Resources */,
+				891B7D2418B3F4ED0034A2B6 /* Images.xcassets in Resources */,
 				89ED45B8189A27F9005E3A17 /* Main_iPhone.storyboard in Resources */,
 				89ED45AF189A27F9005E3A17 /* InfoPlist.strings in Resources */,
 			);
@@ -268,8 +291,11 @@
 			files = (
 				89ED45DE189A35AB005E3A17 /* MapsPageViewController.m in Sources */,
 				89ED45BE189A27F9005E3A17 /* HomePageViewController.m in Sources */,
+				891B7D2218B3F4630034A2B6 /* ViewController.m in Sources */,
+				891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */,
 				89ED45B5189A27F9005E3A17 /* AppDelegate.m in Sources */,
 				893A550818A30E5800488316 /* ExibitViewController.m in Sources */,
+				891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */,
 				89ED45B1189A27F9005E3A17 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

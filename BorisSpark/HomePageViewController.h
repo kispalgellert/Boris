@@ -10,6 +10,7 @@
 
 @interface HomePageViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *ViewMapButton;
 
 
 @end

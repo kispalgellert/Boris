@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Cc7-hw-IfR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="7gb-Lu-RrF">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="A1u-Bi-HhF">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="7gb-Lu-RrF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QKc-Va-Xid">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="dSc-RB-1Tf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TSa-rv-zti" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-210" y="-124"/>
+        </scene>
         <!--Home Page View Controller - HomePageViewController-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="HomePageViewController" id="vXZ-lx-hvc" customClass="HomePageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomePageId" title="HomePageViewController" id="vXZ-lx-hvc" customClass="HomePageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tGg-A0-0ZW"/>
                         <viewControllerLayoutGuide type="bottom" id="vbg-29-j9u"/>
@@ -25,13 +40,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enb-DX-mQH">
-                                <rect key="frame" x="104" y="269" width="112" height="30"/>
+                                <rect key="frame" x="68" y="211" width="112" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View map">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LS7-7I-cRI" kind="push" id="0Dk-Jb-WTE"/>
+                                    <action selector="ViewMapPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hcK-S3-QHO"/>
+                                    <segue destination="LS7-7I-cRI" kind="push" id="HID-f7-ZVL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,32 +59,17 @@
                         </connections>
                     </navigationItem>
                     <connections>
-                        <outlet property="view" destination="enb-DX-mQH" id="swJ-cv-OcO"/>
+                        <outlet property="ViewMapButton" destination="enb-DX-mQH" id="zQP-Jk-6kf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="303" y="40"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="SYZ-Ej-eQg">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="Cc7-hw-IfR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Mr-kf-oCT">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jAc-4J-CQF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OTe-Kj-ktG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-173" y="-124"/>
-        </scene>
         <!--Maps Page View Controller-->
         <scene sceneID="7Ln-D9-oFG">
             <objects>
-                <viewController id="LS7-7I-cRI" customClass="MapsPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapsPageId" id="LS7-7I-cRI" customClass="MapsPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q3r-ri-Pmc"/>
                         <viewControllerLayoutGuide type="bottom" id="V0y-qx-pLX"/>
@@ -84,7 +85,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="a9O-cW-LC4" kind="push" id="2Bx-Hr-D6a"/>
+                                    <segue destination="a9O-cW-LC4" kind="push" id="2Fx-02-6lY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDm-nv-PiN">
@@ -127,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="755" y="-124"/>
         </scene>
-        <!--Exibit View Controller-->
+        <!--View Controller-->
         <scene sceneID="qOG-oq-ISZ">
             <objects>
-                <viewController id="a9O-cW-LC4" customClass="ExibitViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExibitPageId" id="a9O-cW-LC4" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ihn-W1-uDh"/>
                         <viewControllerLayoutGuide type="bottom" id="hh8-cL-5Hd"/>
@@ -138,28 +139,13 @@
                     <view key="view" contentMode="scaleToFill" id="IQH-d7-8Ql">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTp-aM-BnP">
-                                <rect key="frame" x="119" y="130" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="ExibitBackButtonTouch:" destination="a9O-cW-LC4" eventType="touchUpInside" id="3qW-CN-IEt"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="JvO-vq-bkk"/>
-                    <connections>
-                        <outlet property="ExibitBackButtom" destination="hTp-aM-BnP" id="Aju-IP-fEh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4A-Mr-O6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1264" y="46"/>
+            <point key="canvasLocation" x="1222" y="-124"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
