@@ -7,6 +7,7 @@
 //
 
 #import "MapsPageViewController.h"
+#import "ViewController.h"
 
 @interface MapsPageViewController ()
 
@@ -30,5 +31,13 @@
     //[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
     [self.navigationController popToViewController:[self.navigationController topViewController] animated:YES];
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"earthSegue"]){
+        ViewController *controller = (ViewController *)segue.destinationViewController;
+        [controller setGalleryIndex:0];
+    }
+}
+
 
 @end

@@ -11,4 +11,6 @@
 
 @interface ViewController : UIViewController <UIScrollViewAccessibilityDelegate>
 
+@property int galleryIndex;
+
 @end

@@ -7,12 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "Model.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    Model *sharedModel = [Model sharedModel];
+    [sharedModel init];
     return YES;
 }
 							

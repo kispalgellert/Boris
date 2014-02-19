@@ -10,6 +10,9 @@
 
 
 #import "ViewController.h"
+#import "Model.h"
+#import "Gallery.h"
+#import "Exhibit.h"
 
 @interface ViewController ()
 
@@ -24,7 +27,7 @@
     BTGlassScrollView *_glassScrollView2;
     BTGlassScrollView *_glassScrollView3;
     int _page;
-
+    Model *sharedModel;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -34,11 +37,15 @@
         // Custom initialization
         _page = 0;
     }
+    
     return self;
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    sharedModel = [Model sharedModel];
+    
     //showing white status
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
@@ -75,9 +82,35 @@
         [_viewScroller setShowsHorizontalScrollIndicator:NO];
         [self.view addSubview:_viewScroller];
         
-        _glassScrollView1 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"background3"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customView]];
-        _glassScrollView2 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"background2"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customView]];
-        _glassScrollView3 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"background"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customView]];
+//        for (int i = 0; i < [[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] count]; i++)
+//        {
+//            _glassScrollView1 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame
+//                                                         BackgroundImage:[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] objectAtIndex:i] background]
+//                                                            blurredImage:nil
+//                                                  viewDistanceFromBottom:120
+//                                                          foregroundView:[self customView]];
+//            [_viewScroller addSubview:_glassScrollView1];
+//        }
+//
+        
+        _glassScrollView1 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame
+                                                     BackgroundImage:[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:0] background]
+                                                        blurredImage:nil
+                                              viewDistanceFromBottom:120
+                                                      foregroundView:[self customView]];
+        
+        _glassScrollView2 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame
+                                                     BackgroundImage:[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:1] background]
+                                                        blurredImage:nil
+                                              viewDistanceFromBottom:120
+                                                      foregroundView:[self customView]];
+        
+        _glassScrollView3 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame
+                                                     BackgroundImage:[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:2] background]
+                                                        blurredImage:nil
+                                              viewDistanceFromBottom:120
+                                                      foregroundView:[self customView]];
+
         
         [_viewScroller addSubview:_glassScrollView1];
         [_viewScroller addSubview:_glassScrollView2];
@@ -127,41 +160,90 @@
 
 - (UIView *)customView
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 705)];
-
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 120)];
-    [label setText:[NSString stringWithFormat:@"TEST TITLE"]];
+    CGSize size = [[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:_page+1] name]
+                   sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:60]
+                   constrainedToSize:CGSizeMake(310, 200)
+                   lineBreakMode:UILineBreakModeWordWrap];
+    CGSize size1 = [[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:_page+1] description]
+                    sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:20]
+                    constrainedToSize:CGSizeMake(310, 200)
+                    lineBreakMode:UILineBreakModeWordWrap];
+    CGSize size2 = [[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:_page+1] questions]
+                    sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:20]
+                    constrainedToSize:CGSizeMake(310, 200)
+                    lineBreakMode:UILineBreakModeWordWrap];
+    CGSize size3 = [[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:_page+1] buttonLabel]
+                    sizeWithFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:20]
+                    constrainedToSize:CGSizeMake(310, 200)
+                    lineBreakMode:UILineBreakModeWordWrap];
     
+    UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    NSLog(@"%f",window.frame.size.height
+);
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, window.frame.size.height+size.height)];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 35, 310, size.height)];
+    [label setText:[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:_page+1] name]];
+//    [label setText:[NSString stringWithFormat:@"Line 1\nLine 2\nLine 3"]];
     [label setTextColor:[UIColor whiteColor]];
-    [label setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:120]];
+    [label setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:60]];
     [label setShadowColor:[UIColor blackColor]];
     [label setShadowOffset:CGSizeMake(1, 1)];
+    [label setNumberOfLines:0];
     [view addSubview:label];
     
-    UIView *box1 = [[UIView alloc] initWithFrame:CGRectMake(5, 140, 310, 125)];
+    
+    UIView *box1 = [[UIView alloc] initWithFrame:CGRectMake(5, 140, 310, size1.height)];
     box1.layer.cornerRadius = 3;
     box1.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
-    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(5, 140, 310, 125)];
-    [label1 setText:[NSString stringWithFormat:@"lorem ip[sumadmaisodmoaismdioamsdioamsdiomasiodmaiosmds"]];
+    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(5, 140, 310, size1.height)];
+    [label1 setText:[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:_page+1] description]];
+    //[label1 setText:[NSString stringWithFormat:@"lorem ip[sumadmaisodmoaismdioamsdioamsdiomasiodmaiosmds"]];
     [label1 setTextColor:[UIColor whiteColor]];
     [label1 setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:20]];
-    //[label1 setShadowColor:[UIColor blackColor]];
-    //[label1 setShadowOffset:CGSizeMake(1, 1)];
+    [label1 setShadowColor:[UIColor blackColor]];
+    [label1 setShadowOffset:CGSizeMake(1, 1)];
     [label1 setNumberOfLines:0];
     [view addSubview:box1];
     [view addSubview:label1];
     
-    UIView *box2 = [[UIView alloc] initWithFrame:CGRectMake(5, 270, 310, 300)];
+    UIView *box2 = [[UIView alloc] initWithFrame:CGRectMake(5, 140+size1.height+5, 310, size2.height)];
     box2.layer.cornerRadius = 3;
+    UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(5, 140+size1.height+5, 310, size2.height)];
+    [label2 setText:[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:_page+1] questions]];
+    //[label1 setText:[NSString stringWithFormat:@"lorem ip[sumadmaisodmoaismdioamsdioamsdiomasiodmaiosmds"]];
+    [label2 setTextColor:[UIColor whiteColor]];
+    [label2 setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:20]];
+    [label2 setShadowColor:[UIColor blackColor]];
+    [label2 setShadowOffset:CGSizeMake(1, 1)];
+    [label2 setNumberOfLines:0];
     box2.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
+    [view addSubview:label2];
     [view addSubview:box2];
     
-    UIView *box3 = [[UIView alloc] initWithFrame:CGRectMake(5, 575, 310, 125)];
+    UIView *box3 = [[UIView alloc] initWithFrame:CGRectMake(5, 140+size1.height+5+size2.height+5, 310, size3.height)];
     box3.layer.cornerRadius = 3;
     box3.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
+    UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(5, 140+size1.height+5+size2.height+5, 310, size3.height)];
+    [label3 setText:[[[[[sharedModel galleryList] objectAtIndex:_galleryIndex] exhibitList] objectAtIndex:_page+1] buttonLabel]];
+    //[label1 setText:[NSString stringWithFormat:@"lorem ip[sumadmaisodmoaismdioamsdioamsdiomasiodmaiosmds"]];
+    [label3 setTextColor:[UIColor whiteColor]];
+    [label3 setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:20]];
+    [label3 setShadowColor:[UIColor blackColor]];
+    [label3 setShadowOffset:CGSizeMake(1, 1)];
+    [label3 setNumberOfLines:0];
     [view addSubview:box3];
+    [view addSubview:label3];
     
     return view;
+}
+
+- (CGSize)sizeForLabel:(UILabel *)label {
+    CGSize constrain = CGSizeMake(label.bounds.size.width, FLT_MAX);
+    CGSize size = [label.text sizeWithFont:label.font constrainedToSize:constrain lineBreakMode:UILineBreakModeWordWrap];
+    
+    return size;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

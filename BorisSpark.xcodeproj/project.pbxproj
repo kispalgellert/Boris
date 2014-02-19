@@ -11,6 +11,10 @@
 		891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CFA18B3F35B0034A2B6 /* UIImage+ImageEffects.m */; };
 		891B7D2218B3F4630034A2B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2118B3F4630034A2B6 /* ViewController.m */; };
 		891B7D2418B3F4ED0034A2B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891B7D2318B3F4ED0034A2B6 /* Images.xcassets */; };
+		891B7D2A18B3FF420034A2B6 /* Exhibit.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2918B3FF420034A2B6 /* Exhibit.m */; };
+		891B7D2D18B401330034A2B6 /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2C18B401330034A2B6 /* Gallery.m */; };
+		891B7D3018B401AA0034A2B6 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2F18B401AA0034A2B6 /* Model.m */; };
+		891B7D3218B42AE80034A2B6 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = 891B7D3118B42AE80034A2B6 /* text.txt */; };
 		893A550818A30E5800488316 /* ExibitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A550718A30E5800488316 /* ExibitViewController.m */; };
 		89ED45A5189A27F9005E3A17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A4189A27F9005E3A17 /* Foundation.framework */; };
 		89ED45A7189A27F9005E3A17 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A6189A27F9005E3A17 /* CoreGraphics.framework */; };
@@ -47,6 +51,13 @@
 		891B7D2018B3F4630034A2B6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		891B7D2118B3F4630034A2B6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		891B7D2318B3F4ED0034A2B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		891B7D2818B3FF420034A2B6 /* Exhibit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exhibit.h; sourceTree = "<group>"; };
+		891B7D2918B3FF420034A2B6 /* Exhibit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exhibit.m; sourceTree = "<group>"; };
+		891B7D2B18B401330034A2B6 /* Gallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gallery.h; sourceTree = "<group>"; };
+		891B7D2C18B401330034A2B6 /* Gallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gallery.m; sourceTree = "<group>"; };
+		891B7D2E18B401AA0034A2B6 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		891B7D2F18B401AA0034A2B6 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		891B7D3118B42AE80034A2B6 /* text.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
 		893A550618A30E5800488316 /* ExibitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExibitViewController.h; sourceTree = "<group>"; };
 		893A550718A30E5800488316 /* ExibitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExibitViewController.m; sourceTree = "<group>"; };
 		89ED45A1189A27F9005E3A17 /* BorisSpark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BorisSpark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,9 +121,18 @@
 			path = BTGlassScrollView;
 			sourceTree = "<group>";
 		};
+		891B7D3318B42BBD0034A2B6 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				891B7D3118B42AE80034A2B6 /* text.txt */,
+			);
+			name = Documents;
+			sourceTree = "<group>";
+		};
 		89ED4598189A27F8005E3A17 = {
 			isa = PBXGroup;
 			children = (
+				891B7D3318B42BBD0034A2B6 /* Documents */,
 				89ED45AA189A27F9005E3A17 /* BorisSpark */,
 				89ED45CC189A27F9005E3A17 /* BorisSparkTests */,
 				89ED45A3189A27F9005E3A17 /* Frameworks */,
@@ -155,6 +175,12 @@
 				89ED45AB189A27F9005E3A17 /* Supporting Files */,
 				89ED45DC189A35AB005E3A17 /* MapsPageViewController.h */,
 				89ED45DD189A35AB005E3A17 /* MapsPageViewController.m */,
+				891B7D2818B3FF420034A2B6 /* Exhibit.h */,
+				891B7D2918B3FF420034A2B6 /* Exhibit.m */,
+				891B7D2B18B401330034A2B6 /* Gallery.h */,
+				891B7D2C18B401330034A2B6 /* Gallery.m */,
+				891B7D2E18B401AA0034A2B6 /* Model.h */,
+				891B7D2F18B401AA0034A2B6 /* Model.m */,
 			);
 			path = BorisSpark;
 			sourceTree = "<group>";
@@ -271,6 +297,7 @@
 				891B7D2418B3F4ED0034A2B6 /* Images.xcassets in Resources */,
 				89ED45B8189A27F9005E3A17 /* Main_iPhone.storyboard in Resources */,
 				89ED45AF189A27F9005E3A17 /* InfoPlist.strings in Resources */,
+				891B7D3218B42AE80034A2B6 /* text.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,11 +316,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				891B7D3018B401AA0034A2B6 /* Model.m in Sources */,
 				89ED45DE189A35AB005E3A17 /* MapsPageViewController.m in Sources */,
 				89ED45BE189A27F9005E3A17 /* HomePageViewController.m in Sources */,
+				891B7D2D18B401330034A2B6 /* Gallery.m in Sources */,
 				891B7D2218B3F4630034A2B6 /* ViewController.m in Sources */,
 				891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */,
 				89ED45B5189A27F9005E3A17 /* AppDelegate.m in Sources */,
+				891B7D2A18B3FF420034A2B6 /* Exhibit.m in Sources */,
 				893A550818A30E5800488316 /* ExibitViewController.m in Sources */,
 				891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */,
 				89ED45B1189A27F9005E3A17 /* main.m in Sources */,
