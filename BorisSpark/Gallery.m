@@ -16,8 +16,9 @@
     return self;
 }
 
-- (id) init
+- (id) initWithName:(NSString*)name
 {
+    _name = name;
     _exhibitList = [[NSMutableArray alloc] init];
     return self;
 }

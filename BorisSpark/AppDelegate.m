@@ -15,7 +15,6 @@
 {
     // Override point for customization after application launch.
     Model *sharedModel = [Model sharedModel];
-    [sharedModel init];
     return YES;
 }
 							

@@ -18,9 +18,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"asdasdasd");
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                             forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
     //[self.navigationController setNavigationBarHidden:YES];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,5 +42,11 @@
 - (IBAction)ViewMapPressed:(id)sender {
 
 }
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
+
 
 @end

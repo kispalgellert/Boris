@@ -12,10 +12,9 @@
 
 @property NSString *name;
 @property NSString *description;
-@property NSString *questions;
-@property NSString *buttonLabel;
+@property NSArray *questions;
 @property UIImage *background;
 
-- (id) initWithDescription:(NSString*)description Questions:(NSString*)questions ButtonLabel:(NSString*)buttonLabel Name:(NSString*)name Background:(NSString*)imageName;
+- (id) initWithDescription:(NSString*)description Questions:(NSArray*)questions Name:(NSString*)name Background:(NSString*)imageName;
 
 @end

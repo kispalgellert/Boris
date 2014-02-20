@@ -11,6 +11,6 @@
 
 @interface ViewController : UIViewController <UIScrollViewAccessibilityDelegate>
 
-@property int galleryIndex;
+@property NSString *selectedGallery;
 
 @end

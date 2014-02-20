@@ -10,11 +10,10 @@
 
 @implementation Exhibit
 
-- (id) initWithDescription:(NSString*)description Questions:(NSString*)questions ButtonLabel:(NSString*)buttonLabel Name:(NSString*)name Background:(NSString*)imageName
+- (id) initWithDescription:(NSString*)description Questions:(NSString*)questions Name:(NSString*)name Background:(NSString*)imageName
 {
     _description = [[NSString alloc] initWithString:description];
-    _questions = [[NSString alloc] initWithString:questions];
-    _buttonLabel = [[NSString alloc] initWithString:buttonLabel];
+    _questions = [[NSArray alloc] initWithArray:questions];
     //_background = [[UIImage alloc] initWithContentsOfFile:imageName];
     _background = [[UIImage alloc] init];
     _background = [UIImage imageNamed:imageName];

@@ -11,7 +11,9 @@
 @interface Gallery : NSObject
 
 @property NSMutableArray *exhibitList;
+@property NSString *name;
 
 - (id) initWithExhibitList:(NSMutableArray*)list;
+- (id) initWithName:(NSString*)name;
 
 @end

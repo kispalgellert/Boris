@@ -13,7 +13,6 @@
 @property NSMutableArray *galleryList;
 
 + (id) sharedModel;
-- (NSArray *)findFiles:(NSString *)extension;
 
 
 @end
