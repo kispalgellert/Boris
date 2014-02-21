@@ -10,6 +10,8 @@
 #import "Model.h"
 #import "Gallery.h"
 #import "Exhibit.h"
+#import "SWRevealViewController.h"
+
 
 @interface ViewController ()
 
@@ -49,15 +51,46 @@
     return YES;
 }
 
+- (void)home:(id)sender
+{
+    NSLog(@"tesssst");
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+
+    
+    // Change button color
+    //_sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
+    
+    
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _sidebarButton.target = self.revealViewController;
+    _sidebarButton.action = @selector(revealToggle:);
+    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
+
+    
+    NSLog(@"title = %@", _sidebarButton.title);
+    _sidebarButton.title = @"Side";
+    //[self.navigationController.navigationItem setRightBarButtonItem:_sidebarButton];
+
+    
     sharedModel = [Model sharedModel];
     for (int i = 0; i < [[sharedModel galleryList] count]; i++)
     {
-        if ([[[[sharedModel galleryList] objectAtIndex:i] name] caseInsensitiveCompare:_selectedGallery] == NSOrderedSame)
-            galleryIndex = i;
+//        if ([[[[sharedModel galleryList] objectAtIndex:i] name] caseInsensitiveCompare:_selectedGallery] == NSOrderedSame)
+//            galleryIndex = i;
     }
+
+    galleryIndex = 0;
     
                 _glassScrollArray = [[NSMutableArray alloc] init];
 
@@ -132,7 +165,20 @@
 //    [_viewScroller addSubview:_glassScrollView2];
 //    [_viewScroller addSubview:_glassScrollView3];
     
+
 }
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    UIButton *button3 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button3 setTitle:@"Home" forState:UIControlStateNormal];
+    [button3 setFrame:CGRectMake(0, 0, 200, 45)];
+    [button3 addTarget:self
+                action:@selector(home:)
+      forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.titleView = button3;
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
 //    int page = _page; // resize scrollview can cause setContentOffset off for no reason and screw things up

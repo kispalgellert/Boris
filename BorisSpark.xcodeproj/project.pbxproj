@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8906CDD318B5DEC5008F6C87 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906CDD218B5DEC5008F6C87 /* SWRevealViewController.m */; };
+		8906CDD418B5DEC5008F6C87 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906CDD218B5DEC5008F6C87 /* SWRevealViewController.m */; };
+		8906CDDA18B697E9008F6C87 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906CDD918B697E9008F6C87 /* SidebarViewController.m */; };
+		8906CDDB18B697E9008F6C87 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906CDD918B697E9008F6C87 /* SidebarViewController.m */; };
 		891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */; };
 		891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CFA18B3F35B0034A2B6 /* UIImage+ImageEffects.m */; };
 		891B7D2218B3F4630034A2B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2118B3F4630034A2B6 /* ViewController.m */; };
@@ -50,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8906CDD118B5DEC5008F6C87 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8906CDD218B5DEC5008F6C87 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8906CDD818B697E9008F6C87 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		8906CDD918B697E9008F6C87 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		891B7CF718B3F35B0034A2B6 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
 		891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
 		891B7CF918B3F35B0034A2B6 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -119,6 +127,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8906CDD018B5DEA6008F6C87 /* SideView */ = {
+			isa = PBXGroup;
+			children = (
+				8906CDD818B697E9008F6C87 /* SidebarViewController.h */,
+				8906CDD918B697E9008F6C87 /* SidebarViewController.m */,
+				8906CDD118B5DEC5008F6C87 /* SWRevealViewController.h */,
+				8906CDD218B5DEC5008F6C87 /* SWRevealViewController.m */,
+			);
+			name = SideView;
+			sourceTree = "<group>";
+		};
 		891B7CF618B3F35B0034A2B6 /* BTGlassScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +200,7 @@
 		89ED45AA189A27F9005E3A17 /* BorisSpark */ = {
 			isa = PBXGroup;
 			children = (
+				8906CDD018B5DEA6008F6C87 /* SideView */,
 				891B7CF618B3F35B0034A2B6 /* BTGlassScrollView */,
 				89ED45B3189A27F9005E3A17 /* AppDelegate.h */,
 				89ED45B4189A27F9005E3A17 /* AppDelegate.m */,
@@ -340,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8906CDDA18B697E9008F6C87 /* SidebarViewController.m in Sources */,
 				891B7D3018B401AA0034A2B6 /* Model.m in Sources */,
 				89ED45DE189A35AB005E3A17 /* MapsPageViewController.m in Sources */,
 				89ED45BE189A27F9005E3A17 /* HomePageViewController.m in Sources */,
@@ -351,6 +372,7 @@
 				893A550818A30E5800488316 /* ExibitViewController.m in Sources */,
 				891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */,
 				89ED45B1189A27F9005E3A17 /* main.m in Sources */,
+				8906CDD318B5DEC5008F6C87 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +380,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8906CDDB18B697E9008F6C87 /* SidebarViewController.m in Sources */,
 				89ED45D3189A27F9005E3A17 /* BorisSparkTests.m in Sources */,
+				8906CDD418B5DEC5008F6C87 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

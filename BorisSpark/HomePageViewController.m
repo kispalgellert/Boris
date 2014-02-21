@@ -24,7 +24,7 @@
                              forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
-    //[self.navigationController setNavigationBarHidden:YES];
+    //[self.navigationController setNavigationBarHidden:NO];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
