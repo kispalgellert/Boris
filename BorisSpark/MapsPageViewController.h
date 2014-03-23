@@ -11,5 +11,6 @@
 @interface MapsPageViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *MapsBackButton;
 - (IBAction)MapsBackButtonPressed:(id)sender;
+- (IBAction)EarthPressed:(id)sender;
 
 @end

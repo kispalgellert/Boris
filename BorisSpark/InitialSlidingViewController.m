@@ -1,20 +1,18 @@
 //
-//  ExibitViewController.m
+//  InitialSlidingViewController.m
 //  BorisSpark
 //
-//  Created by Gellert on 2/5/2014.
+//  Created by ASE Lab on 3/22/2014.
 //  Copyright (c) 2014 Gellert. All rights reserved.
 //
 
-#import "ExibitViewController.h"
-#import "MapsPageViewController.h"
+#import "InitialSlidingViewController.h"
 
-
-@interface ExibitViewController ()
+@interface InitialSlidingViewController ()
 
 @end
 
-@implementation ExibitViewController
+@implementation InitialSlidingViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,22 +26,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"fuck");
 	// Do any additional setup after loading the view.
-
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-- (IBAction)ExibitBackButtonTouch:(id)sender {
-    //[self.navigationController popToViewController:[self.navigationController parentViewController] animated:YES];
-
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return YES;
 }
 
 @end

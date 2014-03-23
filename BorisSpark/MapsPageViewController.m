@@ -8,6 +8,7 @@
 
 #import "MapsPageViewController.h"
 #import "ViewController.h"
+#import "ExhibitTableViewController.h"
 
 @interface MapsPageViewController ()
 
@@ -22,11 +23,20 @@
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (IBAction)MapsBackButtonPressed:(id)sender {
     //[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
     [self.navigationController popToViewController:[self.navigationController topViewController] animated:YES];
+}
+
+- (IBAction)EarthPressed:(id)sender {
+    ExhibitTableViewController *tView = [[ExhibitTableViewController alloc] init];
+    tView.galleryName = @"Earth and Sky";
+    [self.navigationController pushViewController:tView animated:YES];
+
+    
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

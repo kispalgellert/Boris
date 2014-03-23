@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController <UIScrollViewAccessibilityDelegate>
 
 @property NSString *selectedGallery;
+@property NSString *selectedExhibit;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

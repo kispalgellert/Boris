@@ -1,4 +1,4 @@
-EXHIBIT NAME: exhibit 4
+EXHIBIT NAME: es4
 GALLERY: Earth and Sky
 DESCRIPTION: description
 IMAGE NAME: background0.png

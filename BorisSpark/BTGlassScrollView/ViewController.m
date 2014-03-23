@@ -51,18 +51,11 @@
     return YES;
 }
 
-- (void)home:(id)sender
-{
-    NSLog(@"tesssst");
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
 
-    
+
     // Change button color
     //_sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
     
@@ -78,7 +71,7 @@
 
 
     
-    NSLog(@"title = %@", _sidebarButton.title);
+
     _sidebarButton.title = @"Side";
     //[self.navigationController.navigationItem setRightBarButtonItem:_sidebarButton];
 
@@ -86,11 +79,16 @@
     sharedModel = [Model sharedModel];
     for (int i = 0; i < [[sharedModel galleryList] count]; i++)
     {
-//        if ([[[[sharedModel galleryList] objectAtIndex:i] name] caseInsensitiveCompare:_selectedGallery] == NSOrderedSame)
-//            galleryIndex = i;
+        if ([[[[sharedModel galleryList] objectAtIndex:i] name] caseInsensitiveCompare:_selectedGallery] == NSOrderedSame)
+            galleryIndex = i;
     }
 
-    galleryIndex = 0;
+
+    for (int i = 0; i < [[[[sharedModel galleryList] objectAtIndex:galleryIndex] exhibitList] count]; i++)
+    {
+        if ([[[[[[sharedModel galleryList] objectAtIndex:galleryIndex] exhibitList] objectAtIndex:i] name] caseInsensitiveCompare:_selectedExhibit] == NSOrderedSame)
+            _pageIndex = i;
+    }
     
                 _glassScrollArray = [[NSMutableArray alloc] init];
 
@@ -165,18 +163,15 @@
 //    [_viewScroller addSubview:_glassScrollView2];
 //    [_viewScroller addSubview:_glassScrollView3];
     
-
+  
+    
 }
+
+
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    UIButton *button3 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button3 setTitle:@"Home" forState:UIControlStateNormal];
-    [button3 setFrame:CGRectMake(0, 0, 200, 45)];
-    [button3 addTarget:self
-                action:@selector(home:)
-      forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.titleView = button3;
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -263,7 +258,7 @@
     UIWindow* window = [UIApplication sharedApplication].keyWindow;
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, window.frame.size.height+size.height)];
-    NSLog(@"pageIndex = %d", _pageIndex);
+    
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 35, 310, size.height)];
     [label setText:[[[[[sharedModel galleryList] objectAtIndex:galleryIndex] exhibitList] objectAtIndex:counter] name]];
     [label setTextColor:[UIColor whiteColor]];
