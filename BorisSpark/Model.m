@@ -36,8 +36,6 @@
 //            a = 0;
 //    }
     
-    NSLog(@"test");
-    
     Gallery *gallery0 = [[Gallery alloc] initWithName:@"Earth and Sky"];
     Gallery *gallery1 = [[Gallery alloc] initWithName:@"Energy and Innovation"];
     Gallery *gallery2 = [[Gallery alloc] initWithName:@"Feature"];

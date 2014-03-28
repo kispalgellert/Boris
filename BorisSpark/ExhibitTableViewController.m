@@ -7,7 +7,7 @@
 //
 
 #import "ExhibitTableViewController.h"
-#import "ViewController.h"
+#import "GlassViewController.h"
 #import "Model.h"
 #import "Exhibit.h"
 #import "Gallery.h"
@@ -116,7 +116,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ViewController *view = [[ViewController alloc] init];
+    GlassViewController *view = [[GlassViewController alloc] init];
     view.selectedGallery = _galleryName;
     view.selectedExhibit = [[exhibits objectAtIndex:indexPath.row] name];
     [self.navigationController pushViewController:view animated:YES];

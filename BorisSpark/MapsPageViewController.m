@@ -7,8 +7,9 @@
 //
 
 #import "MapsPageViewController.h"
-#import "ViewController.h"
+#import "GlassViewController.h"
 #import "ExhibitTableViewController.h"
+#import "SWRevealViewController.h"
 
 @interface MapsPageViewController ()
 
@@ -23,6 +24,16 @@
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
 	// Do any additional setup after loading the view, typically from a nib.
+    // Change button color
+    _sidebarButton.tintColor = [UIColor whiteColor];
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    _sidebarButton.target = self.revealViewController;
+    _sidebarButton.action = @selector(rightRevealToggle:);
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
     
 }
 
@@ -40,7 +51,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    ViewController *controller = (ViewController *)segue.destinationViewController;
+    GlassViewController *controller = (GlassViewController *)segue.destinationViewController;
     if([segue.identifier isEqualToString:@"earthSegue"]){
         [controller setSelectedGallery:@"Earth and Sky"];
     }

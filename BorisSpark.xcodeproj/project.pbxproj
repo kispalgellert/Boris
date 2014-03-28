@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8906CDD318B5DEC5008F6C87 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906CDD218B5DEC5008F6C87 /* SWRevealViewController.m */; };
-		8906CDD418B5DEC5008F6C87 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906CDD218B5DEC5008F6C87 /* SWRevealViewController.m */; };
-		8906CDDA18B697E9008F6C87 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906CDD918B697E9008F6C87 /* SidebarViewController.m */; };
-		8906CDDB18B697E9008F6C87 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8906CDD918B697E9008F6C87 /* SidebarViewController.m */; };
 		891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */; };
 		891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CFA18B3F35B0034A2B6 /* UIImage+ImageEffects.m */; };
-		891B7D2218B3F4630034A2B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2118B3F4630034A2B6 /* ViewController.m */; };
+		891B7D2218B3F4630034A2B6 /* GlassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2118B3F4630034A2B6 /* GlassViewController.m */; };
 		891B7D2418B3F4ED0034A2B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891B7D2318B3F4ED0034A2B6 /* Images.xcassets */; };
 		891B7D2A18B3FF420034A2B6 /* Exhibit.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2918B3FF420034A2B6 /* Exhibit.m */; };
 		891B7D2D18B401330034A2B6 /* Gallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2C18B401330034A2B6 /* Gallery.m */; };
@@ -35,6 +31,9 @@
 		89ED45D1189A27F9005E3A17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89ED45CF189A27F9005E3A17 /* InfoPlist.strings */; };
 		89ED45D3189A27F9005E3A17 /* BorisSparkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ED45D2189A27F9005E3A17 /* BorisSparkTests.m */; };
 		89ED45DE189A35AB005E3A17 /* MapsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ED45DD189A35AB005E3A17 /* MapsPageViewController.m */; };
+		CE0C2C6018E52AB200257037 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2C5F18E52AB200257037 /* SWRevealViewController.m */; };
+		CE0C2C6218E52D9700257037 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0C2C6118E52D9700257037 /* menu@2x.png */; };
+		CE0C2C6518E53B9B00257037 /* SideBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2C6418E53B9B00257037 /* SideBarTableViewController.m */; };
 		CE29876618B56C0200182511 /* exhibit1.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE29876518B56C0200182511 /* exhibit1.txt */; };
 		CE29876A18B57C5B00182511 /* exhibit0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE29876918B57C5B00182511 /* exhibit0.txt */; };
 		CE29876C18B57CCA00182511 /* exhibit3.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE29876B18B57CCA00182511 /* exhibit3.txt */; };
@@ -42,14 +41,7 @@
 		CE29877018B5CCAB00182511 /* exhibit5.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE29876F18B5CCAB00182511 /* exhibit5.txt */; };
 		CE29877218B5CCE300182511 /* exhibit6.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE29877118B5CCE300182511 /* exhibit6.txt */; };
 		D5C4CA8518DE24C800F5A368 /* ExhibitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA8418DE24C800F5A368 /* ExhibitTableViewController.m */; };
-		D5C4CA9418DE509400F5A368 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA8818DE509400F5A368 /* ECPercentDrivenInteractiveTransition.m */; };
-		D5C4CA9518DE509400F5A368 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA8A18DE509400F5A368 /* ECSlidingAnimationController.m */; };
-		D5C4CA9618DE509400F5A368 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA8D18DE509400F5A368 /* ECSlidingInteractiveTransition.m */; };
-		D5C4CA9718DE509400F5A368 /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA8F18DE509400F5A368 /* ECSlidingSegue.m */; };
-		D5C4CA9818DE509400F5A368 /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA9118DE509400F5A368 /* ECSlidingViewController.m */; };
-		D5C4CA9918DE509400F5A368 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA9318DE509400F5A368 /* UIViewController+ECSlidingViewController.m */; };
 		D5C4CA9B18DE54F000F5A368 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C4CA9A18DE54F000F5A368 /* QuartzCore.framework */; };
-		D5C4CA9E18DE59CC00F5A368 /* InitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA9D18DE59CC00F5A368 /* InitialSlidingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,16 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8906CDD118B5DEC5008F6C87 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		8906CDD218B5DEC5008F6C87 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		8906CDD818B697E9008F6C87 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
-		8906CDD918B697E9008F6C87 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		891B7CF718B3F35B0034A2B6 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
 		891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
 		891B7CF918B3F35B0034A2B6 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		891B7CFA18B3F35B0034A2B6 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		891B7D2018B3F4630034A2B6 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		891B7D2118B3F4630034A2B6 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		891B7D2018B3F4630034A2B6 /* GlassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlassViewController.h; path = BTGlassScrollView/GlassViewController.h; sourceTree = "<group>"; };
+		891B7D2118B3F4630034A2B6 /* GlassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlassViewController.m; path = BTGlassScrollView/GlassViewController.m; sourceTree = "<group>"; };
 		891B7D2318B3F4ED0034A2B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		891B7D2818B3FF420034A2B6 /* Exhibit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exhibit.h; sourceTree = "<group>"; };
 		891B7D2918B3FF420034A2B6 /* Exhibit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exhibit.m; sourceTree = "<group>"; };
@@ -104,6 +92,11 @@
 		89ED45D2189A27F9005E3A17 /* BorisSparkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorisSparkTests.m; sourceTree = "<group>"; };
 		89ED45DC189A35AB005E3A17 /* MapsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsPageViewController.h; sourceTree = "<group>"; };
 		89ED45DD189A35AB005E3A17 /* MapsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsPageViewController.m; sourceTree = "<group>"; };
+		CE0C2C5E18E52AB200257037 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		CE0C2C5F18E52AB200257037 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		CE0C2C6118E52D9700257037 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		CE0C2C6318E53B9B00257037 /* SideBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarTableViewController.h; sourceTree = "<group>"; };
+		CE0C2C6418E53B9B00257037 /* SideBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarTableViewController.m; sourceTree = "<group>"; };
 		CE29876518B56C0200182511 /* exhibit1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit1.txt; sourceTree = "<group>"; };
 		CE29876918B57C5B00182511 /* exhibit0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit0.txt; sourceTree = "<group>"; };
 		CE29876B18B57CCA00182511 /* exhibit3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit3.txt; sourceTree = "<group>"; };
@@ -112,22 +105,7 @@
 		CE29877118B5CCE300182511 /* exhibit6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit6.txt; sourceTree = "<group>"; };
 		D5C4CA8318DE24C800F5A368 /* ExhibitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitTableViewController.h; sourceTree = "<group>"; };
 		D5C4CA8418DE24C800F5A368 /* ExhibitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitTableViewController.m; sourceTree = "<group>"; };
-		D5C4CA8718DE509400F5A368 /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
-		D5C4CA8818DE509400F5A368 /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
-		D5C4CA8918DE509400F5A368 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingAnimationController.h; sourceTree = "<group>"; };
-		D5C4CA8A18DE509400F5A368 /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingAnimationController.m; sourceTree = "<group>"; };
-		D5C4CA8B18DE509400F5A368 /* ECSlidingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingConstants.h; sourceTree = "<group>"; };
-		D5C4CA8C18DE509400F5A368 /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
-		D5C4CA8D18DE509400F5A368 /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
-		D5C4CA8E18DE509400F5A368 /* ECSlidingSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingSegue.h; sourceTree = "<group>"; };
-		D5C4CA8F18DE509400F5A368 /* ECSlidingSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingSegue.m; sourceTree = "<group>"; };
-		D5C4CA9018DE509400F5A368 /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
-		D5C4CA9118DE509400F5A368 /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
-		D5C4CA9218DE509400F5A368 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
-		D5C4CA9318DE509400F5A368 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
 		D5C4CA9A18DE54F000F5A368 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D5C4CA9C18DE59CC00F5A368 /* InitialSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialSlidingViewController.h; sourceTree = "<group>"; };
-		D5C4CA9D18DE59CC00F5A368 /* InitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialSlidingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,23 +133,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8906CDD018B5DEA6008F6C87 /* SideView */ = {
-			isa = PBXGroup;
-			children = (
-				8906CDD818B697E9008F6C87 /* SidebarViewController.h */,
-				8906CDD918B697E9008F6C87 /* SidebarViewController.m */,
-				8906CDD118B5DEC5008F6C87 /* SWRevealViewController.h */,
-				8906CDD218B5DEC5008F6C87 /* SWRevealViewController.m */,
-			);
-			name = SideView;
-			sourceTree = "<group>";
-		};
 		891B7CF618B3F35B0034A2B6 /* BTGlassScrollView */ = {
 			isa = PBXGroup;
 			children = (
 				891B7D2318B3F4ED0034A2B6 /* Images.xcassets */,
-				891B7D2018B3F4630034A2B6 /* ViewController.h */,
-				891B7D2118B3F4630034A2B6 /* ViewController.m */,
 				891B7CF718B3F35B0034A2B6 /* BTGlassScrollView.h */,
 				891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */,
 				891B7CF918B3F35B0034A2B6 /* UIImage+ImageEffects.h */,
@@ -197,7 +162,8 @@
 		89ED4598189A27F8005E3A17 = {
 			isa = PBXGroup;
 			children = (
-				D5C4CA8618DE509400F5A368 /* ECSlidingViewController */,
+				CE0C2C6118E52D9700257037 /* menu@2x.png */,
+				CE0C2C5D18E52AB200257037 /* SWRevealViewController */,
 				891B7D3318B42BBD0034A2B6 /* Documents */,
 				89ED45AA189A27F9005E3A17 /* BorisSpark */,
 				89ED45CC189A27F9005E3A17 /* BorisSparkTests */,
@@ -230,10 +196,13 @@
 		89ED45AA189A27F9005E3A17 /* BorisSpark */ = {
 			isa = PBXGroup;
 			children = (
-				8906CDD018B5DEA6008F6C87 /* SideView */,
 				891B7CF618B3F35B0034A2B6 /* BTGlassScrollView */,
 				89ED45B3189A27F9005E3A17 /* AppDelegate.h */,
 				89ED45B4189A27F9005E3A17 /* AppDelegate.m */,
+				891B7D2018B3F4630034A2B6 /* GlassViewController.h */,
+				891B7D2118B3F4630034A2B6 /* GlassViewController.m */,
+				CE0C2C6318E53B9B00257037 /* SideBarTableViewController.h */,
+				CE0C2C6418E53B9B00257037 /* SideBarTableViewController.m */,
 				89ED45B6189A27F9005E3A17 /* Main_iPhone.storyboard */,
 				893A550618A30E5800488316 /* ExibitViewController.h */,
 				893A550718A30E5800488316 /* ExibitViewController.m */,
@@ -251,8 +220,6 @@
 				891B7D2F18B401AA0034A2B6 /* Model.m */,
 				D5C4CA8318DE24C800F5A368 /* ExhibitTableViewController.h */,
 				D5C4CA8418DE24C800F5A368 /* ExhibitTableViewController.m */,
-				D5C4CA9C18DE59CC00F5A368 /* InitialSlidingViewController.h */,
-				D5C4CA9D18DE59CC00F5A368 /* InitialSlidingViewController.m */,
 			);
 			path = BorisSpark;
 			sourceTree = "<group>";
@@ -286,25 +253,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D5C4CA8618DE509400F5A368 /* ECSlidingViewController */ = {
+		CE0C2C5D18E52AB200257037 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D5C4CA8718DE509400F5A368 /* ECPercentDrivenInteractiveTransition.h */,
-				D5C4CA8818DE509400F5A368 /* ECPercentDrivenInteractiveTransition.m */,
-				D5C4CA8918DE509400F5A368 /* ECSlidingAnimationController.h */,
-				D5C4CA8A18DE509400F5A368 /* ECSlidingAnimationController.m */,
-				D5C4CA8B18DE509400F5A368 /* ECSlidingConstants.h */,
-				D5C4CA8C18DE509400F5A368 /* ECSlidingInteractiveTransition.h */,
-				D5C4CA8D18DE509400F5A368 /* ECSlidingInteractiveTransition.m */,
-				D5C4CA8E18DE509400F5A368 /* ECSlidingSegue.h */,
-				D5C4CA8F18DE509400F5A368 /* ECSlidingSegue.m */,
-				D5C4CA9018DE509400F5A368 /* ECSlidingViewController.h */,
-				D5C4CA9118DE509400F5A368 /* ECSlidingViewController.m */,
-				D5C4CA9218DE509400F5A368 /* UIViewController+ECSlidingViewController.h */,
-				D5C4CA9318DE509400F5A368 /* UIViewController+ECSlidingViewController.m */,
+				CE0C2C5E18E52AB200257037 /* SWRevealViewController.h */,
+				CE0C2C5F18E52AB200257037 /* SWRevealViewController.m */,
 			);
-			name = ECSlidingViewController;
-			path = "../../Downloads/ECSlidingViewController-master/ECSlidingViewController";
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE29876E18B57CE100182511 /* exhibit4.txt in Resources */,
+				CE0C2C6218E52D9700257037 /* menu@2x.png in Resources */,
 				89ED45BB189A27F9005E3A17 /* Main_iPad.storyboard in Resources */,
 				891B7D2418B3F4ED0034A2B6 /* Images.xcassets in Resources */,
 				CE29876C18B57CCA00182511 /* exhibit3.txt in Resources */,
@@ -415,27 +371,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8906CDDA18B697E9008F6C87 /* SidebarViewController.m in Sources */,
 				891B7D3018B401AA0034A2B6 /* Model.m in Sources */,
-				D5C4CA9918DE509400F5A368 /* UIViewController+ECSlidingViewController.m in Sources */,
-				D5C4CA9818DE509400F5A368 /* ECSlidingViewController.m in Sources */,
-				D5C4CA9718DE509400F5A368 /* ECSlidingSegue.m in Sources */,
+				CE0C2C6018E52AB200257037 /* SWRevealViewController.m in Sources */,
 				89ED45DE189A35AB005E3A17 /* MapsPageViewController.m in Sources */,
 				89ED45BE189A27F9005E3A17 /* HomePageViewController.m in Sources */,
-				D5C4CA9E18DE59CC00F5A368 /* InitialSlidingViewController.m in Sources */,
-				D5C4CA9618DE509400F5A368 /* ECSlidingInteractiveTransition.m in Sources */,
+				CE0C2C6518E53B9B00257037 /* SideBarTableViewController.m in Sources */,
 				891B7D2D18B401330034A2B6 /* Gallery.m in Sources */,
-				891B7D2218B3F4630034A2B6 /* ViewController.m in Sources */,
+				891B7D2218B3F4630034A2B6 /* GlassViewController.m in Sources */,
 				891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */,
 				89ED45B5189A27F9005E3A17 /* AppDelegate.m in Sources */,
-				D5C4CA9418DE509400F5A368 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				891B7D2A18B3FF420034A2B6 /* Exhibit.m in Sources */,
 				893A550818A30E5800488316 /* ExibitViewController.m in Sources */,
 				891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */,
 				89ED45B1189A27F9005E3A17 /* main.m in Sources */,
-				8906CDD318B5DEC5008F6C87 /* SWRevealViewController.m in Sources */,
 				D5C4CA8518DE24C800F5A368 /* ExhibitTableViewController.m in Sources */,
-				D5C4CA9518DE509400F5A368 /* ECSlidingAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,9 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8906CDDB18B697E9008F6C87 /* SidebarViewController.m in Sources */,
 				89ED45D3189A27F9005E3A17 /* BorisSparkTests.m in Sources */,
-				8906CDD418B5DEC5008F6C87 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

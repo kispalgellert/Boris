@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BTGlassScrollView.h"
 
-@interface ViewController : UIViewController <UIScrollViewAccessibilityDelegate>
+@interface GlassViewController : UIViewController <UIScrollViewAccessibilityDelegate>
 
 @property NSString *selectedGallery;
 @property NSString *selectedExhibit;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

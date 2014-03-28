@@ -6,18 +6,19 @@
 //  Copyright (c) 2013 Byte. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GlassViewController.h"
 #import "Model.h"
 #import "Gallery.h"
 #import "Exhibit.h"
 #import "SWRevealViewController.h"
+#import "SideBarTableViewController.h"
 
 
-@interface ViewController ()
+@interface GlassViewController ()
 
 @end
 
-@implementation ViewController
+@implementation GlassViewController
 {
 //    BTGlassScrollView *_glassScrollView;
     
@@ -56,24 +57,6 @@
     [super viewDidLoad];
 
 
-    // Change button color
-    //_sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
-    
-    
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    }
-    
-    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-    _sidebarButton.target = self.revealViewController;
-    _sidebarButton.action = @selector(revealToggle:);
-    //[self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-
-
-    
-
-    _sidebarButton.title = @"Side";
-    //[self.navigationController.navigationItem setRightBarButtonItem:_sidebarButton];
 
     
     sharedModel = [Model sharedModel];
@@ -89,6 +72,8 @@
         if ([[[[[[sharedModel galleryList] objectAtIndex:galleryIndex] exhibitList] objectAtIndex:i] name] caseInsensitiveCompare:_selectedExhibit] == NSOrderedSame)
             _pageIndex = i;
     }
+    
+   
     
                 _glassScrollArray = [[NSMutableArray alloc] init];
 
@@ -171,11 +156,29 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-
+     if (galleryIndex == 0)
+     {
+//         TableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+//         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+         //[[[(SideBarTableViewController*)(self.revealViewController.rightViewController) firstCell] textLabel] setText:@"FUCK YEA"];
+         [(SideBarTableViewController*)(self.revealViewController.rightViewController) setTemp:10];
+     }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"] style:UIBarButtonItemStylePlain target:self action:@selector(rightRevealToggle:)];
+    
+    // Change button color
+    button.tintColor = [UIColor whiteColor];
+    
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    button.target = self.revealViewController;
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    self.navigationItem.rightBarButtonItem = button;
 //    int page = _page; // resize scrollview can cause setContentOffset off for no reason and screw things up
                 int pageIndex = _pageIndex;
     
