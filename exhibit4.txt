@@ -1,5 +1,5 @@
-EXHIBIT NAME: es4
-GALLERY: Earth and Sky
+EXHIBIT NAME: f0
+GALLERY: Feature
 DESCRIPTION: description
 IMAGE NAME: background0.png
 QUESTION 1: has anyone really been far even as decided to use even go want to do look more like?

@@ -11,8 +11,8 @@
 #import "Gallery.h"
 #import "Exhibit.h"
 #import "SWRevealViewController.h"
-#import "SideBarTableViewController.h"
 #import "SideMenuTableViewController.h"
+#import "UIViewController+BackButtonHandler.h"
 
 
 @interface GlassViewController ()
@@ -35,6 +35,8 @@
     int galleryIndex;
     int counter;
 }
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -397,6 +399,11 @@
         //[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
         //[self.navigationController popToRootViewControllerAnimated:NO];
     }
+}
+
+-(BOOL) navigationShouldPopOnBackButton {
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    return NO; // Ignore 'Back' button this time
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView

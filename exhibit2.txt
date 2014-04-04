@@ -1,5 +1,5 @@
-EXHIBIT NAME: exhibit 2
-GALLERY: Earth and Sky
+EXHIBIT NAME: ei0
+GALLERY: Energy and Innovation
 DESCRIPTION: description
 IMAGE NAME: background2.png
 QUESTION 1: has anyone really been far even as decided to use even go want to do look more like?

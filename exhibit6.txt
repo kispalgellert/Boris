@@ -1,5 +1,5 @@
-EXHIBIT NAME: exhibit 6
-GALLERY: Energy and Innovation
+EXHIBIT NAME: ckm0
+GALLERY: Creative Kids Museum
 DESCRIPTION: description
 IMAGE NAME: background1.png
 QUESTION 1: has anyone really been far even as decided to use even go want to do look more like?
