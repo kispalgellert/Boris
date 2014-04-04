@@ -368,7 +368,7 @@
 
                 CGFloat currentRatio = scrollView.contentOffset.x/scrollView.frame.size.width;
                 int temp = (int)floor(currentRatio);
-                if (_pageIndex != temp)
+                if (_pageIndex != temp && temp > -1)
                 {
                     _pageIndex = temp;
                     NSString * newExhibit = [[NSString alloc] init];
