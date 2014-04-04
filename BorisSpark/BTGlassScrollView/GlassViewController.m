@@ -12,6 +12,7 @@
 #import "Exhibit.h"
 #import "SWRevealViewController.h"
 #import "SideBarTableViewController.h"
+#import "SideMenuTableViewController.h"
 
 
 @interface GlassViewController ()
@@ -52,11 +53,14 @@
     return YES;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-
+    [(SideMenuTableViewController*)(self.revealViewController.rightViewController) setSelectedExhibit:_selectedExhibit];
+    [(SideMenuTableViewController*)(self.revealViewController.rightViewController) setSelectedGallery:_selectedGallery];
+    [[(SideMenuTableViewController*)(self.revealViewController.rightViewController) tableView] reloadData];
 
     
     sharedModel = [Model sharedModel];
@@ -89,9 +93,9 @@
     [shadow setShadowOffset:CGSizeMake(1, 1)];
     [shadow setShadowColor:[UIColor blackColor]];
     [shadow setShadowBlurRadius:1];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor whiteColor], NSShadowAttributeName: shadow};
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
+
+    
+
 
     //background
     self.view.backgroundColor = [UIColor blackColor];
@@ -161,8 +165,13 @@
 //         TableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
 //         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
          //[[[(SideBarTableViewController*)(self.revealViewController.rightViewController) firstCell] textLabel] setText:@"FUCK YEA"];
-         [(SideBarTableViewController*)(self.revealViewController.rightViewController) setTemp:10];
+         //[(SideBarTableViewController*)(self.revealViewController.rightViewController) setTemp:10];
      }
+}
+
+-(void)forceRedraw
+{
+    [self.view setNeedsDisplay];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -220,6 +229,10 @@
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
        // [_glassScrollView1 setBackgroundImage:[UIImage imageNamed:@"background"] overWriteBlur:YES animated:YES duration:1];
     });
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
 }
 
 - (void)viewWillLayoutSubviews
@@ -350,10 +363,17 @@
 //    if (ratio > 1 && ratio < 3) {
 //        [_glassScrollView3 scrollHorizontalRatio:-ratio + 2];
 //    }
-    
 
                 CGFloat currentRatio = scrollView.contentOffset.x/scrollView.frame.size.width;
-                _pageIndex = (int)floor(currentRatio);
+                int temp = (int)floor(currentRatio);
+                if (_pageIndex != temp)
+                {
+                    _pageIndex = temp;
+                    NSString * newExhibit = [[NSString alloc] init];
+                    newExhibit = [[[[[sharedModel galleryList] objectAtIndex:galleryIndex] exhibitList] objectAtIndex:_pageIndex] name];
+                    [(SideMenuTableViewController*)(self.revealViewController.rightViewController) setSelectedExhibit:newExhibit];
+                    [[(SideMenuTableViewController*)(self.revealViewController.rightViewController) tableView] reloadData];
+                }
 
                 int lowerBound = -1;
                 int upperBound = 1;
@@ -365,6 +385,18 @@
                     lowerBound++;
                     upperBound++;
                 }
+}
+
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    //if true, back was pressed
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        NSLog(@"count = %i", [self.navigationController.viewControllers count]);
+        //[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+        //[self.navigationController popToRootViewControllerAnimated:NO];
+    }
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView

@@ -8,6 +8,7 @@
 
 #import "HomePageViewController.h"
 #import "MapsPageViewController.h"
+#import "Model.h"
 
 @interface HomePageViewController ()
 
@@ -25,6 +26,11 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     //[self.navigationController setNavigationBarHidden:NO];
+    
+    Model * sharedModel = [Model sharedModel];
+    [sharedModel setController:self.navigationController];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

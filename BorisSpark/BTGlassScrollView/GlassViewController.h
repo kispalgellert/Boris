@@ -13,5 +13,8 @@
 
 @property NSString *selectedGallery;
 @property NSString *selectedExhibit;
+@property NSString *test;
+
+-(void)forceRedraw;
 
 @end

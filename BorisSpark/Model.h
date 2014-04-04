@@ -11,6 +11,7 @@
 @interface Model : NSObject
 
 @property NSMutableArray *galleryList;
+@property UINavigationController *controller;
 
 + (id) sharedModel;
 

@@ -12,6 +12,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *MapsBackButton;
 - (IBAction)MapsBackButtonPressed:(id)sender;
 - (IBAction)EarthPressed:(id)sender;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

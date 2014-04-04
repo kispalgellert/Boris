@@ -25,14 +25,9 @@
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
 	// Do any additional setup after loading the view, typically from a nib.
     // Change button color
-    _sidebarButton.tintColor = [UIColor whiteColor];
+
     
-    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-    _sidebarButton.target = self.revealViewController;
-    _sidebarButton.action = @selector(rightRevealToggle:);
-    
-    // Set the gesture
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+
 
     
 }
@@ -46,18 +41,6 @@
     ExhibitTableViewController *tView = [[ExhibitTableViewController alloc] init];
     tView.galleryName = @"Earth and Sky";
     [self.navigationController pushViewController:tView animated:YES];
-
-    
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    GlassViewController *controller = (GlassViewController *)segue.destinationViewController;
-    if([segue.identifier isEqualToString:@"earthSegue"]){
-        [controller setSelectedGallery:@"Earth and Sky"];
-    }
-    else if ([segue.identifier isEqualToString:@"energySegue"]){
-        [controller setSelectedGallery:@"Energy and Innovation"];
-    }
 }
 
 - (BOOL)prefersStatusBarHidden {
