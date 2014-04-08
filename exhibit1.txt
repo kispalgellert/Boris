@@ -2,8 +2,7 @@ EXHIBIT NAME: es1
 GALLERY: Earth and Sky
 DESCRIPTION: description
 IMAGE NAME: EC.png
-QUESTION 1: has anyone really been far even as decided to use even go want to do look more like?
-QUESTION 2: would you rather have no teeth or no tongue?
-QUESTION 3: can you twerk?
-QUESTION 4: wow such question
-QUESTION 5: the sand people ride in single file to hide their numbers
+QUESTION 1: Can you stop the avalanche?
+QUESTION 2: Can you build something to stop the avalanche in under 2 minutes?
+QUESTION 3: Can you stop the avalanche using only one kind of material?
+QUESTION 4: Can you control the avalanche to shield just one of the animals?

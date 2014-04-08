@@ -16,6 +16,12 @@
 		891B7D3018B401AA0034A2B6 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2F18B401AA0034A2B6 /* Model.m */; };
 		891B7D3218B42AE80034A2B6 /* exhibit2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 891B7D3118B42AE80034A2B6 /* exhibit2.txt */; };
 		893A550818A30E5800488316 /* ExibitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 893A550718A30E5800488316 /* ExibitViewController.m */; };
+		89601EBB18F4703300099F76 /* TableContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 89601EBA18F4703300099F76 /* TableContent.m */; };
+		89601EBE18F4704500099F76 /* BannerContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 89601EBD18F4704500099F76 /* BannerContent.m */; };
+		89601EC118F4704F00099F76 /* BannerPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89601EC018F4704F00099F76 /* BannerPageViewController.m */; };
+		89601EC418F4705700099F76 /* TablePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89601EC318F4705700099F76 /* TablePageViewController.m */; };
+		89601EC818F4748700099F76 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89601EC618F4748700099F76 /* 1.png */; };
+		89601EC918F4748700099F76 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 89601EC718F4748700099F76 /* 0.png */; };
 		89ED45A5189A27F9005E3A17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A4189A27F9005E3A17 /* Foundation.framework */; };
 		89ED45A7189A27F9005E3A17 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A6189A27F9005E3A17 /* CoreGraphics.framework */; };
 		89ED45A9189A27F9005E3A17 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ED45A8189A27F9005E3A17 /* UIKit.framework */; };
@@ -78,6 +84,16 @@
 		891B7D3118B42AE80034A2B6 /* exhibit2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit2.txt; sourceTree = "<group>"; };
 		893A550618A30E5800488316 /* ExibitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExibitViewController.h; sourceTree = "<group>"; };
 		893A550718A30E5800488316 /* ExibitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExibitViewController.m; sourceTree = "<group>"; };
+		89601EB918F4703300099F76 /* TableContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableContent.h; sourceTree = "<group>"; };
+		89601EBA18F4703300099F76 /* TableContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableContent.m; sourceTree = "<group>"; };
+		89601EBC18F4704500099F76 /* BannerContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerContent.h; sourceTree = "<group>"; };
+		89601EBD18F4704500099F76 /* BannerContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerContent.m; sourceTree = "<group>"; };
+		89601EBF18F4704F00099F76 /* BannerPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerPageViewController.h; sourceTree = "<group>"; };
+		89601EC018F4704F00099F76 /* BannerPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerPageViewController.m; sourceTree = "<group>"; };
+		89601EC218F4705700099F76 /* TablePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TablePageViewController.h; sourceTree = "<group>"; };
+		89601EC318F4705700099F76 /* TablePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TablePageViewController.m; sourceTree = "<group>"; };
+		89601EC618F4748700099F76 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		89601EC718F4748700099F76 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		89ED45A1189A27F9005E3A17 /* BorisSpark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BorisSpark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89ED45A4189A27F9005E3A17 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89ED45A6189A27F9005E3A17 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +196,31 @@
 			name = Documents;
 			sourceTree = "<group>";
 		};
+		89601EB818F4701600099F76 /* HomeScreenWithPages */ = {
+			isa = PBXGroup;
+			children = (
+				89601EC518F4744D00099F76 /* BannerImages */,
+				89601EB918F4703300099F76 /* TableContent.h */,
+				89601EBA18F4703300099F76 /* TableContent.m */,
+				89601EBC18F4704500099F76 /* BannerContent.h */,
+				89601EBD18F4704500099F76 /* BannerContent.m */,
+				89601EBF18F4704F00099F76 /* BannerPageViewController.h */,
+				89601EC018F4704F00099F76 /* BannerPageViewController.m */,
+				89601EC218F4705700099F76 /* TablePageViewController.h */,
+				89601EC318F4705700099F76 /* TablePageViewController.m */,
+			);
+			name = HomeScreenWithPages;
+			sourceTree = "<group>";
+		};
+		89601EC518F4744D00099F76 /* BannerImages */ = {
+			isa = PBXGroup;
+			children = (
+				89601EC618F4748700099F76 /* 1.png */,
+				89601EC718F4748700099F76 /* 0.png */,
+			);
+			name = BannerImages;
+			sourceTree = "<group>";
+		};
 		89ED4598189A27F8005E3A17 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +260,7 @@
 		89ED45AA189A27F9005E3A17 /* BorisSpark */ = {
 			isa = PBXGroup;
 			children = (
+				89601EB818F4701600099F76 /* HomeScreenWithPages */,
 				891B7CF618B3F35B0034A2B6 /* BTGlassScrollView */,
 				89ED45B3189A27F9005E3A17 /* AppDelegate.h */,
 				89ED45B4189A27F9005E3A17 /* AppDelegate.m */,
@@ -366,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89601EC918F4748700099F76 /* 0.png in Resources */,
 				CE29876E18B57CE100182511 /* exhibit4.txt in Resources */,
 				CE0C2C6218E52D9700257037 /* menu@2x.png in Resources */,
 				CE60BD0B18EE717B0092C7A2 /* exhibit8.txt in Resources */,
@@ -375,6 +418,7 @@
 				CE29876C18B57CCA00182511 /* exhibit3.txt in Resources */,
 				CE29877218B5CCE300182511 /* exhibit6.txt in Resources */,
 				CE29877018B5CCAB00182511 /* exhibit5.txt in Resources */,
+				89601EC818F4748700099F76 /* 1.png in Resources */,
 				CE60BD0F18EE71D50092C7A2 /* exhibit10.txt in Resources */,
 				CE60BD0D18EE71BE0092C7A2 /* exhibit9.txt in Resources */,
 				CE60BD1118EE71F50092C7A2 /* exhibit11.txt in Resources */,
@@ -402,7 +446,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				891B7D3018B401AA0034A2B6 /* Model.m in Sources */,
+				89601EBE18F4704500099F76 /* BannerContent.m in Sources */,
 				CE0C2C6018E52AB200257037 /* SWRevealViewController.m in Sources */,
+				89601EC118F4704F00099F76 /* BannerPageViewController.m in Sources */,
 				CE60BD0718EE65220092C7A2 /* CustomColoredAccessory.m in Sources */,
 				89ED45DE189A35AB005E3A17 /* MapsPageViewController.m in Sources */,
 				CE60BD0418EE29520092C7A2 /* SideMenuTableViewController.m in Sources */,
@@ -411,7 +457,9 @@
 				891B7D2218B3F4630034A2B6 /* GlassViewController.m in Sources */,
 				891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */,
 				89ED45B5189A27F9005E3A17 /* AppDelegate.m in Sources */,
+				89601EC418F4705700099F76 /* TablePageViewController.m in Sources */,
 				891B7D2A18B3FF420034A2B6 /* Exhibit.m in Sources */,
+				89601EBB18F4703300099F76 /* TableContent.m in Sources */,
 				893A550818A30E5800488316 /* ExibitViewController.m in Sources */,
 				CE60BD1A18EE90ED0092C7A2 /* UIViewController+BackButtonHandler.m in Sources */,
 				891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */,
