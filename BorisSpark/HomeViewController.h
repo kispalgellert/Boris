@@ -12,5 +12,6 @@
 - (IBAction)viewGalleriesForExhibit:(id)sender;
 @property (weak, nonatomic) IBOutlet UIView *galleryView;
 @property (weak, nonatomic) IBOutlet UILabel *galleryLabel;
+@property (weak, nonatomic) IBOutlet UIView *container1;
 
 @end

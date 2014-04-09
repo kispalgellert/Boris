@@ -31,7 +31,7 @@
     
     
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor clearColor];
     _currentStoryboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     NSNumber *aNum = [[NSNumber alloc] initWithInt:0];
     BannerContent *first = [_currentStoryboard instantiateViewControllerWithIdentifier:@"BannerContentID"];

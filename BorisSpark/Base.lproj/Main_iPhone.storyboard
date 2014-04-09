@@ -108,10 +108,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-xU-oVE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black.png" translatesAutoresizingMaskIntoConstraints="NO" id="ffO-yI-Mg2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-xU-oVE">
                                 <rect key="frame" x="0.0" y="301" width="320" height="222"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="ocR-3u-7iH" kind="embed" identifier="tableChange" id="Xj4-3T-s8A"/>
                                 </connections>
@@ -125,20 +129,10 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xO-ru-xkA">
-                                <rect key="frame" x="-7" y="526" width="325" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="viewGalleriesForExhibit:" destination="QVh-Fk-a0r" eventType="touchUpInside" id="ILX-FB-kY8"/>
-                                </connections>
-                            </button>
-                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-bR-tg6">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-bR-tg6">
                                 <rect key="frame" x="0.0" y="40" width="320" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="1VQ-sA-7xo" kind="embed" id="CZE-Z9-p24"/>
                                 </connections>
@@ -148,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ENR-IR-aKY"/>
                     <connections>
+                        <outlet property="container1" destination="HVV-xU-oVE" id="IeT-ZY-YfI"/>
                         <outlet property="galleryLabel" destination="Vxh-0P-gWE" id="GjF-l7-0aT"/>
                         <outlet property="galleryView" destination="HVV-xU-oVE" id="226-5j-ZSS"/>
                     </connections>
@@ -261,6 +256,9 @@
             <point key="canvasLocation" x="1791" y="24"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Black.png" width="1280" height="720"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

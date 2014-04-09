@@ -36,10 +36,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor clearColor];
+    _tableView.opaque = NO;
+
     _tableView.backgroundView = nil;
-    _tableView.backgroundColor = [UIColor blackColor];
-    _tableView.backgroundView.backgroundColor = [UIColor blackColor];
+    _tableView.backgroundColor = [UIColor clearColor];
+    _tableView.backgroundView.backgroundColor = [UIColor clearColor];
 	// Do any additional setup after loading the view.
     exhibits = [[NSMutableArray alloc] init];
     sharedModel = [Model sharedModel];

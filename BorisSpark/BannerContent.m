@@ -18,7 +18,7 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+    self.view.backgroundColor = [UIColor clearColor];
     NSString* indexToString = [NSString stringWithFormat:@"%li", (long)self.index];
     NSString* imageName = [NSString stringWithFormat:@"%@.%@", indexToString, @"png"];
     [self loadImage:imageName];
