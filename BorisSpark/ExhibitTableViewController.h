@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExhibitTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ExhibitTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property NSString* galleryName;
+@property (assign, nonatomic) NSInteger index;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

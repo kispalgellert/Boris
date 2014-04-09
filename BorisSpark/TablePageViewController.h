@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TablePageViewController : UIViewController
+@interface TablePageViewController : UIViewController <UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property (strong, nonatomic) UIStoryboard *currentStoryboard;

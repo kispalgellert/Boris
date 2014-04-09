@@ -10,5 +10,7 @@
 
 @interface HomeViewController : UIViewController
 - (IBAction)viewGalleriesForExhibit:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *galleryView;
+@property (weak, nonatomic) IBOutlet UILabel *galleryLabel;
 
 @end

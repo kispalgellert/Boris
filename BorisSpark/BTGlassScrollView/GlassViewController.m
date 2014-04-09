@@ -171,6 +171,25 @@
      }
 }
 
+- (void)revealController:(SWRevealViewController *)revealController willMoveToPosition:(FrontViewPosition)position
+{
+    NSLog(@"hit");
+    if(position == FrontViewPositionLeft) {
+        self.view.userInteractionEnabled = YES;
+    } else {
+        self.view.userInteractionEnabled = NO;
+    }
+}
+
+- (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position
+{
+    if(position == FrontViewPositionLeft) {
+        self.view.userInteractionEnabled = YES;
+    } else {
+        self.view.userInteractionEnabled = NO;
+    }
+}
+
 -(void)forceRedraw
 {
     [self.view setNeedsDisplay];
@@ -180,6 +199,8 @@
 {
     UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu.png"] style:UIBarButtonItemStylePlain target:self action:@selector(rightRevealToggle:)];
     
+    self.revealViewController.delegate = self;
+    
     // Change button color
     button.tintColor = [UIColor whiteColor];
     
@@ -187,7 +208,8 @@
     button.target = self.revealViewController;
     
     // Set the gesture
-    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+//    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+[self.revealViewController panGestureRecognizer];
     
     self.navigationItem.rightBarButtonItem = button;
 //    int page = _page; // resize scrollview can cause setContentOffset off for no reason and screw things up
@@ -235,6 +257,7 @@
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewWillLayoutSubviews
@@ -390,19 +413,8 @@
 }
 
 
-
-- (void)viewWillDisappear:(BOOL)animated {
-    
-    //if true, back was pressed
-    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
-        NSLog(@"count = %i", [self.navigationController.viewControllers count]);
-        //[self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
-        //[self.navigationController popToRootViewControllerAnimated:NO];
-    }
-}
-
 -(BOOL) navigationShouldPopOnBackButton {
-    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:0] animated:YES];
     return NO; // Ignore 'Back' button this time
 }
 

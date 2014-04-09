@@ -8,8 +8,13 @@
 
 #import "TablePageViewController.h"
 #import "TableContent.h"
+#import "ExhibitTableViewController.h"
+#import "HomeViewController.h"
 
 @interface TablePageViewController ()
+{
+    int currentPage_;
+}
 
 @end
 
@@ -26,25 +31,55 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"crash test hunt");
     UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
     [view setBackgroundColor:[UIColor greenColor]];
-    
+    currentPage_ = 0;
     
     [super viewDidLoad];
     
     _currentStoryboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     NSNumber *aNum = [[NSNumber alloc] initWithInt:0];
-    TableContent *first = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
-    [first initView];
-    first.index = aNum.integerValue;
-    TableContent *second = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
-    second.index = [[NSNumber numberWithInt:[aNum intValue] + 1] integerValue];
-    [second initView];
-    _pages = [[NSArray alloc] initWithObjects:first, second, nil];
+    
+    ExhibitTableViewController * first = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
+    [first setGalleryName:@"Earth and Sky"];
+    [first setIndex:[aNum integerValue]];
+
+    aNum = @([aNum intValue] + 1);
+
+    ExhibitTableViewController * second = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
+    [second setGalleryName:@"Energy and Innovation"];
+    [second setIndex:[aNum integerValue]];
+    
+    aNum = @([aNum intValue] + 1);
+    
+    ExhibitTableViewController * third = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
+    [third setGalleryName:@"Feature"];
+    [third setIndex:[aNum integerValue]];
+    
+    aNum = @([aNum intValue] + 1);
+    
+    ExhibitTableViewController * fourth = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
+    [fourth setGalleryName:@"Creative Kids Museum"];
+    [fourth setIndex:[aNum integerValue]];
+    
+    aNum = @([aNum intValue] + 1);
+    
+    ExhibitTableViewController * fifth = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
+    [fifth setGalleryName:@"Open Studio"];
+    [fifth setIndex:[aNum integerValue]];
+    
+    aNum = @([aNum intValue] + 1);
+    
+    ExhibitTableViewController * sixth = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
+    [sixth setGalleryName:@"Being Human"];
+    [sixth setIndex:[aNum integerValue]];
+    
+    _pages = [[NSArray alloc] initWithObjects:first, second, third, fourth, fifth, sixth, nil];
     
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
                                                           navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    
+    self.pageController.delegate = self;
     self.pageController.dataSource = self;
     [[self.pageController view] setFrame:[[self view] bounds]];
     
@@ -59,23 +94,40 @@
 }
 
 
-- (TableContent *)viewControllerAtIndex:(NSUInteger)index {
+- (ExhibitTableViewController *)viewControllerAtIndex:(NSUInteger)index {
     NSNumber* requestedPage = [NSNumber numberWithInt:(long)index % [_pages count]];
+
     return _pages[[requestedPage intValue]];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
-    NSUInteger currentViewControllerIndex = [(TableContent *)viewController index];
+    NSUInteger currentViewControllerIndex = [(ExhibitTableViewController *)viewController index];
     currentViewControllerIndex++;
     return [self viewControllerAtIndex:currentViewControllerIndex];
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-    NSUInteger currentViewControllerIndex = [(TableContent *)viewController index];
+    NSUInteger currentViewControllerIndex = [(ExhibitTableViewController *)viewController index];
     currentViewControllerIndex--;
     return [self viewControllerAtIndex:currentViewControllerIndex];
 }
 
+-(void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
+{
+    NSString *newGallery = @"Gallery: ";
+    newGallery = [newGallery stringByAppendingString:[[pendingViewControllers objectAtIndex:0] galleryName]];
+    [[(HomeViewController*)([self.navigationController.viewControllers objectAtIndex:0]) galleryLabel] setText:newGallery];
+}
+
+-(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+
+    int currentIndex = [[self.pageController.viewControllers lastObject] index];
+    currentPage_ = currentIndex;
+//    NSString *newGallery = @"Gallery: ";
+//    newGallery = [newGallery stringByAppendingString:[_pages[currentPage_] galleryName]];
+//    [[(HomeViewController*)([self.navigationController.viewControllers objectAtIndex:0]) galleryLabel] setText:newGallery];
+}
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
     // The selected item reflected in the page indicator.

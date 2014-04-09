@@ -36,6 +36,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blackColor];
+    _tableView.backgroundView = nil;
+    _tableView.backgroundColor = [UIColor blackColor];
+    _tableView.backgroundView.backgroundColor = [UIColor blackColor];
 	// Do any additional setup after loading the view.
     exhibits = [[NSMutableArray alloc] init];
     sharedModel = [Model sharedModel];
@@ -50,7 +54,7 @@
         }
     }
     self.view.backgroundColor = [UIColor clearColor];
-    [self.tableView setSeparatorColor:[UIColor clearColor]];
+    [_tableView setSeparatorColor:[UIColor clearColor]];
     self.navigationController.navigationBar.backgroundColor = [UIColor blackColor];
 }
 
@@ -61,7 +65,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 80;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,11 +91,13 @@
     //[cell.contentView.layer setBorderColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1].CGColor];
     //[cell.contentView.layer setBorderWidth:1.0f];
 
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0,50,320,30)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0,26,320,30)];
     label.textColor = [UIColor whiteColor];
     label.text = [[exhibits objectAtIndex:indexPath.row] name];
     label.textAlignment = NSTextAlignmentLeft;
-    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:33];
+    label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:22];
+    label.shadowColor = [UIColor blackColor];
+    label.shadowOffset = CGSizeMake(1, -1);
     //label.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
     [cell.contentView addSubview:label];
     
@@ -119,11 +125,9 @@
     GlassViewController *view = [[GlassViewController alloc] init];
     view.selectedGallery = _galleryName;
     view.selectedExhibit = [[exhibits objectAtIndex:indexPath.row] name];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self.navigationController pushViewController:view animated:YES];
-//    ExhibitTableViewController *tView = [[ExhibitTableViewController alloc] init];
-//    tView.galleryName = @"Earth and Sky";
-//    [self.navigationController pushViewController:tView animated:YES];
-//    [self performSegueWithIdentifier: @"forward" sender: self];
+
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

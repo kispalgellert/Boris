@@ -39,7 +39,6 @@
 		89ED45D3189A27F9005E3A17 /* BorisSparkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ED45D2189A27F9005E3A17 /* BorisSparkTests.m */; };
 		89ED45DE189A35AB005E3A17 /* MapsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89ED45DD189A35AB005E3A17 /* MapsPageViewController.m */; };
 		CE0C2C6018E52AB200257037 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0C2C5F18E52AB200257037 /* SWRevealViewController.m */; };
-		CE0C2C6218E52D9700257037 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0C2C6118E52D9700257037 /* menu@2x.png */; };
 		CE29876618B56C0200182511 /* exhibit1.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE29876518B56C0200182511 /* exhibit1.txt */; };
 		CE29876A18B57C5B00182511 /* exhibit0.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE29876918B57C5B00182511 /* exhibit0.txt */; };
 		CE29876C18B57CCA00182511 /* exhibit3.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE29876B18B57CCA00182511 /* exhibit3.txt */; };
@@ -54,6 +53,15 @@
 		CE60BD0F18EE71D50092C7A2 /* exhibit10.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE60BD0E18EE71D50092C7A2 /* exhibit10.txt */; };
 		CE60BD1118EE71F50092C7A2 /* exhibit11.txt in Resources */ = {isa = PBXBuildFile; fileRef = CE60BD1018EE71F50092C7A2 /* exhibit11.txt */; };
 		CE60BD1A18EE90ED0092C7A2 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD1918EE90ED0092C7A2 /* UIViewController+BackButtonHandler.m */; };
+		CEF286B718F51AB3000DA7A8 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF286B618F51AB3000DA7A8 /* menu@2x.png */; };
+		CEF286B918F5211A000DA7A8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF286B818F5211A000DA7A8 /* Default@2x.png */; };
+		CEF286BB18F52456000DA7A8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF286BA18F52456000DA7A8 /* icon@2x.png */; };
+		CEF286BD18F524D8000DA7A8 /* exhibit12.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEF286BC18F524D8000DA7A8 /* exhibit12.txt */; };
+		CEF286BF18F52509000DA7A8 /* exhibit13.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEF286BE18F52509000DA7A8 /* exhibit13.txt */; };
+		CEF286C118F52520000DA7A8 /* exhibit14.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEF286C018F52520000DA7A8 /* exhibit14.txt */; };
+		CEF286C318F52546000DA7A8 /* exhibit15.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEF286C218F52546000DA7A8 /* exhibit15.txt */; };
+		CEF286C518F52562000DA7A8 /* exhibit16.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEF286C418F52562000DA7A8 /* exhibit16.txt */; };
+		CEF286C718F52585000DA7A8 /* exhibit17.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEF286C618F52585000DA7A8 /* exhibit17.txt */; };
 		D5C4CA8518DE24C800F5A368 /* ExhibitTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C4CA8418DE24C800F5A368 /* ExhibitTableViewController.m */; };
 		D5C4CA9B18DE54F000F5A368 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C4CA9A18DE54F000F5A368 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -120,7 +128,6 @@
 		89ED45DD189A35AB005E3A17 /* MapsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsPageViewController.m; sourceTree = "<group>"; };
 		CE0C2C5E18E52AB200257037 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CE0C2C5F18E52AB200257037 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		CE0C2C6118E52D9700257037 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		CE29876518B56C0200182511 /* exhibit1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit1.txt; sourceTree = "<group>"; };
 		CE29876918B57C5B00182511 /* exhibit0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit0.txt; sourceTree = "<group>"; };
 		CE29876B18B57CCA00182511 /* exhibit3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit3.txt; sourceTree = "<group>"; };
@@ -138,6 +145,15 @@
 		CE60BD1018EE71F50092C7A2 /* exhibit11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit11.txt; sourceTree = "<group>"; };
 		CE60BD1818EE90ED0092C7A2 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		CE60BD1918EE90ED0092C7A2 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		CEF286B618F51AB3000DA7A8 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		CEF286B818F5211A000DA7A8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CEF286BA18F52456000DA7A8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		CEF286BC18F524D8000DA7A8 /* exhibit12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit12.txt; sourceTree = "<group>"; };
+		CEF286BE18F52509000DA7A8 /* exhibit13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit13.txt; sourceTree = "<group>"; };
+		CEF286C018F52520000DA7A8 /* exhibit14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit14.txt; sourceTree = "<group>"; };
+		CEF286C218F52546000DA7A8 /* exhibit15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit15.txt; sourceTree = "<group>"; };
+		CEF286C418F52562000DA7A8 /* exhibit16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit16.txt; sourceTree = "<group>"; };
+		CEF286C618F52585000DA7A8 /* exhibit17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exhibit17.txt; sourceTree = "<group>"; };
 		D5C4CA8318DE24C800F5A368 /* ExhibitTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExhibitTableViewController.h; sourceTree = "<group>"; };
 		D5C4CA8418DE24C800F5A368 /* ExhibitTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExhibitTableViewController.m; sourceTree = "<group>"; };
 		D5C4CA9A18DE54F000F5A368 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -183,16 +199,22 @@
 		891B7D3318B42BBD0034A2B6 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				CEF286C618F52585000DA7A8 /* exhibit17.txt */,
 				CE60BD1018EE71F50092C7A2 /* exhibit11.txt */,
 				CE60BD0E18EE71D50092C7A2 /* exhibit10.txt */,
+				CEF286C418F52562000DA7A8 /* exhibit16.txt */,
 				CE60BD0C18EE71BE0092C7A2 /* exhibit9.txt */,
 				CE60BD0A18EE717B0092C7A2 /* exhibit8.txt */,
+				CEF286C218F52546000DA7A8 /* exhibit15.txt */,
 				CE60BD0818EE715B0092C7A2 /* exhibit7.txt */,
 				CE29877118B5CCE300182511 /* exhibit6.txt */,
+				CEF286C018F52520000DA7A8 /* exhibit14.txt */,
 				CE29876F18B5CCAB00182511 /* exhibit5.txt */,
 				CE29876D18B57CE100182511 /* exhibit4.txt */,
+				CEF286BE18F52509000DA7A8 /* exhibit13.txt */,
 				CE29876B18B57CCA00182511 /* exhibit3.txt */,
 				891B7D3118B42AE80034A2B6 /* exhibit2.txt */,
+				CEF286BC18F524D8000DA7A8 /* exhibit12.txt */,
 				CE29876518B56C0200182511 /* exhibit1.txt */,
 				CE29876918B57C5B00182511 /* exhibit0.txt */,
 			);
@@ -229,9 +251,11 @@
 		89ED4598189A27F8005E3A17 = {
 			isa = PBXGroup;
 			children = (
+				CEF286BA18F52456000DA7A8 /* icon@2x.png */,
+				CEF286B818F5211A000DA7A8 /* Default@2x.png */,
+				CEF286B618F51AB3000DA7A8 /* menu@2x.png */,
 				CE60BD1818EE90ED0092C7A2 /* UIViewController+BackButtonHandler.h */,
 				CE60BD1918EE90ED0092C7A2 /* UIViewController+BackButtonHandler.m */,
-				CE0C2C6118E52D9700257037 /* menu@2x.png */,
 				CE0C2C5D18E52AB200257037 /* SWRevealViewController */,
 				891B7D3318B42BBD0034A2B6 /* Documents */,
 				89ED45AA189A27F9005E3A17 /* BorisSpark */,
@@ -415,21 +439,29 @@
 			files = (
 				89601EC918F4748700099F76 /* 0.png in Resources */,
 				CE29876E18B57CE100182511 /* exhibit4.txt in Resources */,
-				CE0C2C6218E52D9700257037 /* menu@2x.png in Resources */,
 				CE60BD0B18EE717B0092C7A2 /* exhibit8.txt in Resources */,
+				CEF286C318F52546000DA7A8 /* exhibit15.txt in Resources */,
 				89ED45BB189A27F9005E3A17 /* Main_iPad.storyboard in Resources */,
+				CEF286B718F51AB3000DA7A8 /* menu@2x.png in Resources */,
 				CE60BD0918EE715B0092C7A2 /* exhibit7.txt in Resources */,
 				891B7D2418B3F4ED0034A2B6 /* Images.xcassets in Resources */,
 				CE29876C18B57CCA00182511 /* exhibit3.txt in Resources */,
+				CEF286BB18F52456000DA7A8 /* icon@2x.png in Resources */,
 				CE29877218B5CCE300182511 /* exhibit6.txt in Resources */,
 				CE29877018B5CCAB00182511 /* exhibit5.txt in Resources */,
 				89601EC818F4748700099F76 /* 1.png in Resources */,
 				CE60BD0F18EE71D50092C7A2 /* exhibit10.txt in Resources */,
+				CEF286C118F52520000DA7A8 /* exhibit14.txt in Resources */,
+				CEF286BF18F52509000DA7A8 /* exhibit13.txt in Resources */,
+				CEF286C518F52562000DA7A8 /* exhibit16.txt in Resources */,
+				CEF286B918F5211A000DA7A8 /* Default@2x.png in Resources */,
 				CE60BD0D18EE71BE0092C7A2 /* exhibit9.txt in Resources */,
 				CE60BD1118EE71F50092C7A2 /* exhibit11.txt in Resources */,
 				CE29876618B56C0200182511 /* exhibit1.txt in Resources */,
 				89ED45B8189A27F9005E3A17 /* Main_iPhone.storyboard in Resources */,
+				CEF286C718F52585000DA7A8 /* exhibit17.txt in Resources */,
 				89ED45AF189A27F9005E3A17 /* InfoPlist.strings in Resources */,
+				CEF286BD18F524D8000DA7A8 /* exhibit12.txt in Resources */,
 				CE29876A18B57C5B00182511 /* exhibit0.txt in Resources */,
 				891B7D3218B42AE80034A2B6 /* exhibit2.txt in Resources */,
 			);
