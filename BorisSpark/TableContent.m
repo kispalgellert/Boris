@@ -7,6 +7,9 @@
 //
 
 #import "TableContent.h"
+#import "Model.h"
+#import "Exhibit.h"
+#import "Gallery.h"
 
 @interface TableContent ()
 
@@ -14,20 +17,41 @@
 
 @implementation TableContent
 {
-    NSArray * contentOfcells;
+    NSMutableArray * exhibits;
+    Model *sharedModel;
+    NSString *galleryName;
 }
-- (void)viewDidLoad {
-    
+
+
+
+- (void)initView {
+    galleryName = @"Earth and Sky";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    contentOfcells = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+    //exhibits = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+    
+    
+    exhibits = [[NSMutableArray alloc] init];
+    sharedModel = [Model sharedModel];
+    for (int i = 0; i < [[sharedModel galleryList] count]; i++)
+    {
+        if ([[[[sharedModel galleryList] objectAtIndex:i] name] isEqualToString:galleryName])
+        {
+            for (id object in [[[sharedModel galleryList] objectAtIndex:i] exhibitList])
+            {
+                [exhibits addObject:object];
+            }
+        }
+    }
+    
+    
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [contentOfcells count];
+    return [exhibits count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -40,7 +64,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [contentOfcells objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[exhibits objectAtIndex:indexPath.row] name];
     return cell;
 }
 

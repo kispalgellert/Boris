@@ -35,9 +35,11 @@
     _currentStoryboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     NSNumber *aNum = [[NSNumber alloc] initWithInt:0];
     TableContent *first = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
+    [first initView];
     first.index = aNum.integerValue;
     TableContent *second = [_currentStoryboard instantiateViewControllerWithIdentifier:@"TableContentID"];
     second.index = [[NSNumber numberWithInt:[aNum intValue] + 1] integerValue];
+    [second initView];
     _pages = [[NSArray alloc] initWithObjects:first, second, nil];
     
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll

@@ -11,5 +11,6 @@
 @interface TableContent : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (assign, nonatomic) NSInteger index;
+-(void) initView;
 
 @end

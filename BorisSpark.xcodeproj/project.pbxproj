@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8914C59418F4BA5300B3F671 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8914C59318F4BA5300B3F671 /* HomeViewController.m */; };
 		891B7CFB18B3F35B0034A2B6 /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */; };
 		891B7CFC18B3F35B0034A2B6 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7CFA18B3F35B0034A2B6 /* UIImage+ImageEffects.m */; };
 		891B7D2218B3F4630034A2B6 /* GlassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891B7D2118B3F4630034A2B6 /* GlassViewController.m */; };
@@ -68,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8914C59218F4BA5300B3F671 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8914C59318F4BA5300B3F671 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		891B7CF718B3F35B0034A2B6 /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
 		891B7CF818B3F35B0034A2B6 /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
 		891B7CF918B3F35B0034A2B6 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				89601EC018F4704F00099F76 /* BannerPageViewController.m */,
 				89601EC218F4705700099F76 /* TablePageViewController.h */,
 				89601EC318F4705700099F76 /* TablePageViewController.m */,
+				8914C59218F4BA5300B3F671 /* HomeViewController.h */,
+				8914C59318F4BA5300B3F671 /* HomeViewController.m */,
 			);
 			name = HomeScreenWithPages;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				CE0C2C6018E52AB200257037 /* SWRevealViewController.m in Sources */,
 				89601EC118F4704F00099F76 /* BannerPageViewController.m in Sources */,
 				CE60BD0718EE65220092C7A2 /* CustomColoredAccessory.m in Sources */,
+				8914C59418F4BA5300B3F671 /* HomeViewController.m in Sources */,
 				89ED45DE189A35AB005E3A17 /* MapsPageViewController.m in Sources */,
 				CE60BD0418EE29520092C7A2 /* SideMenuTableViewController.m in Sources */,
 				89ED45BE189A27F9005E3A17 /* HomePageViewController.m in Sources */,
