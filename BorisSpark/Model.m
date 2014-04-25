@@ -14,30 +14,6 @@
 
 - (id) init
 {
-//    Gallery *gallery0 = [[Gallery alloc] init];
-//    Gallery *gallery1 = [[Gallery alloc] init];
-//    Gallery *gallery2 = [[Gallery alloc] init];
-//    int a = 0;
-//    for (int i = 0; i < 9; i++)
-//    {
-//        Exhibit *exhibit = [[Exhibit alloc] initWithDescription:[NSString stringWithFormat:@"exhibit %i description",i]
-//                                                      Questions:[NSString stringWithFormat:@"exhibit %i questions",i]
-//                                                    ButtonLabel:@"label"
-//                                                           Name:[NSString stringWithFormat:@"exhibit %i",a]
-//                                                     Background:[NSString stringWithFormat:@"background%i",a]];
-//        if (i < 3)
-//            [[gallery0 exhibitList] addObject:exhibit];
-//        else if (i < 6)
-//            [[gallery1 exhibitList] addObject:exhibit];
-//        else
-//            [[gallery2 exhibitList] addObject:exhibit];
-//        a++;
-//        if (a == 3)
-//            a = 0;
-//    }
-    
-    NSLog(@"INIT");
-    
     Gallery *gallery0 = [[Gallery alloc] initWithName:@"Earth and Sky"];
     Gallery *gallery1 = [[Gallery alloc] initWithName:@"Energy and Innovation"];
     Gallery *gallery2 = [[Gallery alloc] initWithName:@"Feature"];
@@ -84,14 +60,6 @@
                 else
                     break;
             }
-            
-//            NSLog(@"Name = %@", name);
-//            NSLog(@"Gallery = %@", gallery);
-//            NSLog(@"Description = %@", description);
-//            NSLog(@"Image = %@", imageName);
-//            NSLog(@"Questions = %@", questionArray);
-//            NSLog(@"file = %@", contentOfFile);
-            
             Exhibit *exhibit = [[Exhibit alloc] initWithDescription:description Questions:questionArray Name:name Background:imageName];
             for (int i = 0; i < [_galleryList count]; i++)
             {
@@ -102,23 +70,8 @@
                 }
             }
         }
-        
         b++;
     }
-    
-//    for (int i = 0; i < [_galleryList count]; i++)
-//    {
-//        NSLog(@"GALLERY = %@", [[_galleryList objectAtIndex:i] name]);
-//        NSLog(@"--------");
-//        for (int a = 0; a < [[[_galleryList objectAtIndex:i] exhibitList] count]; a++)
-//        {
-//            NSLog(@"Exhibit = %@", [[[[_galleryList objectAtIndex:i] exhibitList] objectAtIndex:a] name]);
-//            NSLog(@"Description = %@", [[[[_galleryList objectAtIndex:i] exhibitList] objectAtIndex:a] description]);
-//            //NSLog(@"Image = %@", [[[[_galleryList objectAtIndex:i] exhibitList] objectAtIndex:a] background]);
-//            NSLog(@"Questions = %@", [[[[_galleryList objectAtIndex:i] exhibitList] objectAtIndex:a] questions]);
-//        }
-//    }
-//    NSLog(@"count = %d", [[[_galleryList objectAtIndex:1] exhibitList] count]);
     return self;
 }
 

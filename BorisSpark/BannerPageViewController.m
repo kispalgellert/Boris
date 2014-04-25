@@ -33,12 +33,24 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
     _currentStoryboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+
     NSNumber *aNum = [[NSNumber alloc] initWithInt:0];
     BannerContent *first = [_currentStoryboard instantiateViewControllerWithIdentifier:@"BannerContentID"];
     first.index = aNum.integerValue;
+    
     BannerContent *second = [_currentStoryboard instantiateViewControllerWithIdentifier:@"BannerContentID"];
     second.index = [[NSNumber numberWithInt:[aNum intValue] + 1] integerValue];
-    _pages = [[NSArray alloc] initWithObjects:first, second, nil];
+    
+    BannerContent *third = [_currentStoryboard instantiateViewControllerWithIdentifier:@"BannerContentID"];
+    third.index = [[NSNumber numberWithInt:[aNum intValue] + 2] integerValue];
+    
+    BannerContent *fourth = [_currentStoryboard instantiateViewControllerWithIdentifier:@"BannerContentID"];
+    fourth.index = [[NSNumber numberWithInt:[aNum intValue] + 3] integerValue];
+    
+    BannerContent *fifth = [_currentStoryboard instantiateViewControllerWithIdentifier:@"BannerContentID"];
+    fifth.index = [[NSNumber numberWithInt:[aNum intValue] + 4] integerValue];
+    
+    _pages = [[NSArray alloc] initWithObjects:first, second, third, fourth, fifth, nil];
     
     self.pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
                                                           navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];

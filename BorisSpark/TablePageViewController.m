@@ -119,6 +119,8 @@
     NSString *newGallery = @"Gallery: ";
     newGallery = [newGallery stringByAppendingString:[[pendingViewControllers objectAtIndex:0] galleryName]];
     [[(HomeViewController*)([self.navigationController.viewControllers objectAtIndex:0]) galleryLabel] setText:newGallery];
+        [[(HomeViewController*)([self.navigationController.viewControllers objectAtIndex:0]) galleryLabel] setShadowOffset:CGSizeMake(1, -1)];
+    [[(HomeViewController*)([self.navigationController.viewControllers objectAtIndex:0]) galleryLabel] setShadowColor:[UIColor blackColor]];
 }
 
 -(void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed

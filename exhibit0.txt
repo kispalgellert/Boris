@@ -1,7 +1,7 @@
-EXHIBIT NAME: es0
+EXHIBIT NAME: Firefly
 GALLERY: Earth and Sky
-DESCRIPTION: description
-IMAGE NAME: BH.png
+DESCRIPTION: Firefly
+IMAGE NAME: LE.png
 QUESTION 1: Can you stop the avalanche?
 QUESTION 2: Can you build something to stop the avalanche in under 2 minutes?
 QUESTION 3: Can you stop the avalanche using only one kind of material?

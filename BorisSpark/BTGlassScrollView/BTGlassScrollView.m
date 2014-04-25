@@ -27,28 +27,37 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        dispatch_group_t group = dispatch_group_create();
+        
         //initialize values
         _backgroundImage = backgroundImage;
         if (blurredImage) {
             _blurredBackgroundImage = backgroundImage;
         }else{
-            if ([_delegate respondsToSelector:@selector(glassScrollView:blurForImage:)]) {
-                _blurredBackgroundImage = [_delegate glassScrollView:self blurForImage:_backgroundImage];
-            } else {
-                _blurredBackgroundImage = [backgroundImage applyBlurWithRadius:DEFAULT_BLUR_RADIUS tintColor:DEFAULT_BLUR_TINT_COLOR saturationDeltaFactor:DEFAULT_BLUR_DELTA_FACTOR maskImage:nil];
-            }
+            dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+                if ([_delegate respondsToSelector:@selector(glassScrollView:blurForImage:)]) {
+                    _blurredBackgroundImage = [_delegate glassScrollView:self blurForImage:_backgroundImage];
+                } else {
+                    _blurredBackgroundImage = [backgroundImage applyBlurWithRadius:DEFAULT_BLUR_RADIUS tintColor:DEFAULT_BLUR_TINT_COLOR saturationDeltaFactor:DEFAULT_BLUR_DELTA_FACTOR maskImage:nil];
+                }
+            });
         }
+        
         _viewDistanceFromBottom = viewDistanceFromBottom;
         _foregroundView = foregroundView;
-        
+
         //autoresize
         [self setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
-        
-        //create views
+
         [self createBackgroundView];
         [self createForegroundView];
         [self createTopShadow];
         [self createBottomShadow];
+        
+        dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+            // update the background view when we've finished the blur operation
+            _blurredBackgroundImageView.image = _blurredBackgroundImage;
+        });
     }
     return self;
 }

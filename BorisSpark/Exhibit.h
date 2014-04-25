@@ -14,6 +14,7 @@
 @property NSString *description;
 @property NSArray *questions;
 @property UIImage *background;
+@property UIImage *backgroundPrview;
 
 - (id) initWithDescription:(NSString*)description Questions:(NSArray*)questions Name:(NSString*)name Background:(NSString*)imageName;
 

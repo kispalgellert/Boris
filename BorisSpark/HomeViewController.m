@@ -28,6 +28,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    
     Model * sharedModel = [Model sharedModel];
     [sharedModel setController:self.navigationController];
     [_galleryLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14]];
@@ -36,6 +43,9 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.topItem.title = @"Spark";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.hidden=NO;
     _container1.backgroundColor = [UIColor clearColor];
 
 	// Do any additional setup after loading the view.

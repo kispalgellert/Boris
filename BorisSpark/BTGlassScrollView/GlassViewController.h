@@ -17,5 +17,6 @@
 @property NSString *test;
 
 -(void)forceRedraw;
+-(void)forceClear;
 
 @end

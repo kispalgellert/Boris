@@ -13,7 +13,6 @@
 #import "SWRevealViewController.h"
 #import "CustomColoredAccessory.h"
 #import "GlassViewController.h"
-#import "HomePageViewController.h"
 #import "AppDelegate.h"
 
 @interface SideMenuTableViewController ()
