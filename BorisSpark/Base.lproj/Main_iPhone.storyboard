@@ -105,16 +105,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-xU-oVE">
-                                <rect key="frame" x="20" y="268" width="280" height="222"/>
+                            <containerView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-xU-oVE">
+                                <rect key="frame" x="20" y="258" width="280" height="253"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="ocR-3u-7iH" kind="embed" identifier="tableChange" id="Xj4-3T-s8A"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gallery: Earth and Sky " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxh-0P-gWE">
-                                <rect key="frame" x="5" y="238" width="300" height="38"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Gallery: Earth and Sky " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxh-0P-gWE">
+                                <rect key="frame" x="5" y="228" width="300" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,7 +122,7 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="-1"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-bR-tg6">
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCM-bR-tg6">
                                 <rect key="frame" x="0.0" y="40" width="320" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -130,7 +130,7 @@
                                     <segue destination="1VQ-sA-7xo" kind="embed" id="CZE-Z9-p24"/>
                                 </connections>
                             </containerView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="8Ef-Su-fdI">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="8Ef-Su-fdI">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items/>
@@ -145,6 +145,12 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HVV-xU-oVE" firstAttribute="top" secondItem="SCM-bR-tg6" secondAttribute="bottom" constant="38" id="Ngk-z1-BzT"/>
+                            <constraint firstItem="IwA-kU-Huy" firstAttribute="top" secondItem="8Ef-Su-fdI" secondAttribute="bottom" id="RQ8-TT-LG8"/>
+                            <constraint firstItem="HVV-xU-oVE" firstAttribute="top" secondItem="Vxh-0P-gWE" secondAttribute="bottom" constant="-8" id="gFy-j8-SUQ"/>
+                            <constraint firstItem="8Ef-Su-fdI" firstAttribute="top" secondItem="HVV-xU-oVE" secondAttribute="bottom" constant="13" id="yaQ-LV-tyN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ENR-IR-aKY"/>
                     <connections>
@@ -196,7 +202,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZeQ-jd-HHX"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zBr-8m-utM">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="222"/>
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="253"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
