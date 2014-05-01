@@ -8,8 +8,19 @@
 
 #import "BannerPageViewController.h"
 #import "BannerContent.h"
+#include <stdlib.h>
 
 @interface BannerPageViewController ()
+{
+    NSArray *firstArray;
+    NSArray *secondArray;
+    NSArray *thirdArray;
+    NSArray *fourthArray;
+    NSArray *fifthArray;
+    int previousNumber;
+    
+    int currentPage;
+}
 
 @end
 
@@ -60,13 +71,75 @@
     
     NSArray *viewControllers = [[NSArray alloc] initWithObjects:first, nil];
     
+    firstArray = [[NSArray alloc] initWithObjects:first, nil];
+    secondArray = [[NSArray alloc] initWithObjects:second, nil];
+    thirdArray = [[NSArray alloc] initWithObjects:third, nil];
+    fourthArray = [[NSArray alloc] initWithObjects:fourth, nil];
+    fifthArray = [[NSArray alloc] initWithObjects:fifth, nil];
+    
     [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     [self addChildViewController:self.pageController];
     [[self view] addSubview:[self.pageController view]];
     [self.pageController didMoveToParentViewController:self];
     
+    previousNumber = -1;
+    currentPage = 0;
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(scrollPage) userInfo:nil repeats:YES];
 }
+
+- (void)scrollPage
+{
+    int randomNumber = previousNumber;
+    while (randomNumber == previousNumber)
+    {
+        randomNumber = arc4random_uniform(5);
+    }
+
+    if (randomNumber > previousNumber)
+    {
+        switch (randomNumber)
+        {
+            case 1:
+                [self.pageController setViewControllers:secondArray direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+                break;
+            case 2:
+                [self.pageController setViewControllers:thirdArray direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+                break;
+            case 3:
+                [self.pageController setViewControllers:fourthArray direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+                break;
+            case 4:
+                [self.pageController setViewControllers:fifthArray direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+                break;
+            default:
+                break;
+        }
+    }
+    else
+    {
+        switch (randomNumber)
+        {
+            case 0:
+                [self.pageController setViewControllers:firstArray direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+                break;
+            case 1:
+                [self.pageController setViewControllers:secondArray direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+                break;
+            case 2:
+                [self.pageController setViewControllers:thirdArray direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+                break;
+            case 3:
+                [self.pageController setViewControllers:fourthArray direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+                break;
+            default:
+                break;
+        }
+    }
+    
+    previousNumber = randomNumber;
+}
+
 
 
 - (BannerContent *)viewControllerAtIndex:(NSUInteger)index {
@@ -99,3 +172,22 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

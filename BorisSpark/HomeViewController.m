@@ -9,8 +9,11 @@
 #import "HomeViewController.h"
 #import "ExhibitTableViewController.h"
 #import "Model.h"
+#import "MapViewController.h"
+#import "PhotoCollageViewController.h"
 
 @interface HomeViewController ()
+
 
 @end
 
@@ -28,7 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self setTitle:@"Home"];
+
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
@@ -43,21 +47,47 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.topItem.title = @"Spark";
+
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     self.navigationController.navigationBar.hidden=NO;
     _container1.backgroundColor = [UIColor clearColor];
 
+//    [_generateCollageButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+//    //[_generateCollageButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [_generateCollageButton setTitle:@"Generate Collage" forState:UIControlStateNormal];
+//    [_generateCollageButton setTitle:@"Generate Collage" forState:UIControlStateSelected];
+//    [_generateCollageButton.titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:22]];
+//    [_generateCollageButton.layer setCornerRadius:3];
+//    [_generateCollageButton setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.6]];
+    
+    UIBarButtonItem *generateCollage = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"collageIcon"] style:UIBarButtonItemStyleBordered target:self action:@selector(createCollage:)];
+    
+    
+    UIBarButtonItem *viewMap = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"mapIcon"] style:UIBarButtonItemStyleBordered target:self action:@selector(segueToMap:)];
+    
+    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+
+
+    _origToolbar = [NSArray arrayWithObjects:spacer, generateCollage, spacer, viewMap, spacer, nil];
+    [_toolbar setItems:_origToolbar];
+    [_toolbar setTintColor:[UIColor whiteColor]];
 	// Do any additional setup after loading the view.
+}
+
+-(void)createCollage:(id)sender
+{
+    [self performSegueWithIdentifier:@"collage" sender:self];
+
+}
+
+-(void)segueToMap:(id)sender
+{
+    [self performSegueWithIdentifier:@"map" sender:self];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    NSString * segueName = segue.identifier;
-//    if ([segueName isEqualToString: @"tableChange"]) {
-//        [segue.destinationViewController setGalleryName:@"Earth and Sky"];
-        // do something with the AlertView's subviews here...
-//    }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,5 +101,8 @@
     ExhibitTableViewController *tView = [[ExhibitTableViewController alloc] init];
     tView.galleryName = @"Earth and Sky";
     [self.navigationController pushViewController:tView animated:YES];
+}
+
+- (IBAction)tester:(id)sender {
 }
 @end

@@ -13,6 +13,7 @@
 #import "SWRevealViewController.h"
 #import "SideMenuTableViewController.h"
 #import "UIViewController+BackButtonHandler.h"
+#import "UIImage+ImageEffects.h"
 
 
 @interface GlassViewController ()
@@ -50,6 +51,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setTitle:_selectedGallery];
     [(SideMenuTableViewController*)(self.revealViewController.rightViewController) setSelectedExhibit:_selectedExhibit];
     [(SideMenuTableViewController*)(self.revealViewController.rightViewController) setSelectedGallery:_selectedGallery];
     [[(SideMenuTableViewController*)(self.revealViewController.rightViewController) tableView] reloadData];
@@ -159,7 +161,7 @@
 //    self.navigationController.navigationBar.shadowImage = [UIImage new];
 //    self.navigationController.navigationBar.translucent = YES;
 //    self.navigationController.view.backgroundColor = [UIColor clearColor];
-//    
+//
 //    sharedModel = [Model sharedModel];
 //    for (int i = 0; i < [[sharedModel galleryList] count]; i++)
 //    {
@@ -173,16 +175,16 @@
 //        if ([[[[[[sharedModel galleryList] objectAtIndex:galleryIndex] exhibitList] objectAtIndex:i] name] caseInsensitiveCompare:_selectedExhibit] == NSOrderedSame)
 //            _pageIndex = i;
 //    }
-//    
+//
 //    _glassScrollArray = [[NSMutableArray alloc] init];
 //
-//    
+//
 //    //showing white status
 //    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-//    
+//
 //    //preventing weird inset
 //    [self setAutomaticallyAdjustsScrollViewInsets: NO];
-//    
+//
 //    //navigation bar work
 //    NSShadow *shadow = [[NSShadow alloc] init];
 //    [shadow setShadowOffset:CGSizeMake(1, 1)];
@@ -191,9 +193,9 @@
 //
 //    //background
 //    self.view.backgroundColor = [UIColor blackColor];
-//    
+//
 //    CGFloat blackSideBarWidth = 2;
-//    
+//
 //    _viewScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width + 2*blackSideBarWidth, self.view.frame.size.height)];
 //    [_viewScroll setPagingEnabled:YES];
 //    [_viewScroll setDelegate:self];
@@ -209,7 +211,7 @@
 ////                                        blurredImage:nil
 ////                                        viewDistanceFromBottom:120
 ////                                        foregroundView:[self customView]];
-////        
+////
 ////        [_glassScrollArray addObject:glassView];
 ////        [_viewScroll addSubview:glassView];
 ////    }
@@ -363,7 +365,7 @@
     [label setShadowOffset:CGSizeMake(1, 1)];
     [label setNumberOfLines:0];
     [view addSubview:label];
-
+    
     
     UIView *box1 = [[UIView alloc] initWithFrame:CGRectMake(5, 140, 310, size1.height)];
     box1.layer.cornerRadius = 3;
@@ -381,7 +383,7 @@
     UIView *box2 = [[UIView alloc] initWithFrame:CGRectMake(5, 140+size1.height+10, 310, size2.height)];
     box2.layer.cornerRadius = 3;
     UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(5, 140+size1.height+10, 310, size2.height)];
-
+    
     [label2 setText:questionString];
     [label2 setTextColor:[UIColor whiteColor]];
     [label2 setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:14]];
@@ -391,27 +393,41 @@
     box2.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
     [view addSubview:label2];
     [view addSubview:box2];
-
+    
     UIView *box3 = [[UIView alloc] initWithFrame:CGRectMake(5, 140+size1.height+10+size2.height+10, 310, size2.height)];
     box3.layer.cornerRadius = 3;
     box3.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"camera"]];
+    imageView.frame = CGRectMake(5, 140+size1.height+10+size2.height+10, 310, size2.height);
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
     UIButton *collage = [UIButton buttonWithType:UIButtonTypeCustom];
     collage.frame = CGRectMake(5, 140+size1.height+10+size2.height+10, 310, size2.height);
-    [collage setTitle:@"Take Photo For Collage" forState:UIControlStateNormal];
     [collage addTarget:self action:@selector(myAction:) forControlEvents:UIControlEventTouchUpInside];
     [collage setEnabled:YES];
     [[collage titleLabel] setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:20]];
     [collage setBackgroundColor:[UIColor clearColor]];
-
+    
     [view addSubview:box3];
+    [view addSubview:imageView];
     [view addSubview:collage];
-
+    
     counter++;
     return view;
 }
 
 -(void)myAction:(id)sender {
-    NSLog(@"ha");
+    
+	UIImagePickerController *myImagePicker = [[UIImagePickerController alloc] init];
+	myImagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	myImagePicker.delegate = self;
+	myImagePicker.allowsEditing = NO;
+	
+	[self presentViewController:myImagePicker animated:YES completion:nil];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -434,14 +450,14 @@
         [(SideMenuTableViewController*)(self.revealViewController.rightViewController) setSelectedExhibit:newExhibit];
         [[(SideMenuTableViewController*)(self.revealViewController.rightViewController) tableView] reloadData];
     }
-
+    
     int lowerBound = -1;
     int upperBound = 1;
     for (int i = 0; i < [_glassScrollArray count]; i++)
     {
         if (currentRatio > lowerBound && currentRatio < upperBound)
             [[_glassScrollArray objectAtIndex:i] scrollHorizontalRatio:-currentRatio + upperBound - 1];
-
+        
         lowerBound++;
         upperBound++;
     }
@@ -484,3 +500,5 @@
 }
 
 @end
+
+

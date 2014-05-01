@@ -49,7 +49,7 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    NSLog(@"gallery = %@, exhibit = %@", _selectedGallery, _selectedExhibit);
+    NSLog(@"gallery = %@\nexhibit = %@", _selectedGallery, _selectedExhibit);
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +62,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
 
     return [[sharedModel galleryList] count];
@@ -71,7 +71,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     int result = -1;
     
     result = [collapsedSections_ containsObject:@(section)] ? 0 : [[[[sharedModel galleryList] objectAtIndex:section] exhibitList] count];
@@ -85,7 +84,8 @@
     NSLog(@"Exhibit Name = %@", [[[[[sharedModel galleryList] objectAtIndex:indexPath.section] exhibitList] objectAtIndex:indexPath.row] name]);
     NSString *gal = [[[sharedModel galleryList] objectAtIndex:indexPath.section] name];
     NSString *exh = [[[[[sharedModel galleryList] objectAtIndex:indexPath.section] exhibitList] objectAtIndex:indexPath.row] name];
-    
+    NSLog(@"double check\nGallery Name = %@", gal);
+    NSLog(@"double check\nExhibit Name = %@", exh);
 
     
 //    [(GlassViewController*)([self.revealViewController.frontViewController.navigationController.viewControllers lastObject]) setSelectedGallery:gal];
@@ -100,6 +100,8 @@
     GlassViewController *view = [[GlassViewController alloc] init];
     view.selectedGallery = gal;
     view.selectedExhibit = exh;
+    
+    [[sharedModel controller] popViewControllerAnimated:NO];
     [[sharedModel controller] pushViewController:view animated:YES];
     [self.revealViewController rightRevealToggle:Nil];
 //    AppDelegate *del = (AppDelegate *)[UIApplication sharedApplication].delegate;

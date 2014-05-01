@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BannerPageViewController : UIViewController
+@interface BannerPageViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) UIPageViewController *pageController;
 @property (strong, nonatomic) UIStoryboard *currentStoryboard;

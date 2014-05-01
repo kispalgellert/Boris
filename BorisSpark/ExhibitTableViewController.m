@@ -55,7 +55,7 @@
     }
     self.view.backgroundColor = [UIColor clearColor];
     [_tableView setSeparatorColor:[UIColor clearColor]];
-    self.navigationController.navigationBar.backgroundColor = [UIColor blackColor];
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -75,13 +75,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
 
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[[exhibits objectAtIndex:indexPath.row] backgroundPrview]];
+    
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[[exhibits objectAtIndex:indexPath.row] background]];
+    cell.backgroundView.clipsToBounds = YES;
     cell.backgroundView.contentMode = UIViewContentModeScaleAspectFill;
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0,26,320,30)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0,26,280,30)];
     label.textColor = [UIColor whiteColor];
     label.text = [[exhibits objectAtIndex:indexPath.row] name];
-
     label.textAlignment = NSTextAlignmentLeft;
     label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:22];
     label.shadowColor = [UIColor blackColor];

@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    Model *sharedModel = [Model sharedModel];
+    [Model sharedModel];
     return YES;
 }
 							

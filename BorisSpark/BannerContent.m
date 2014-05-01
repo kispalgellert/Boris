@@ -33,7 +33,7 @@
 }
 
 -(void) loadImage:(NSString *) name {
-    id a = [_bannerImageView initWithImage:[UIImage imageNamed:name]];
+   id a = [_bannerImageView initWithImage:[UIImage imageNamed:name]];
 }
 
 @end

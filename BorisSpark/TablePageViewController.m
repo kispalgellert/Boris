@@ -10,10 +10,12 @@
 #import "TableContent.h"
 #import "ExhibitTableViewController.h"
 #import "HomeViewController.h"
+#import "Model.h"
 
 @interface TablePageViewController ()
 {
     int currentPage_;
+    Model *sharedModel;
 }
 
 @end
@@ -31,10 +33,10 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@"crash test hunt");
-    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
-    [view setBackgroundColor:[UIColor greenColor]];
+    //UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
+    //[view setBackgroundColor:[UIColor greenColor]];
     currentPage_ = 0;
+    sharedModel = [Model sharedModel];
     
     [super viewDidLoad];
     
@@ -98,7 +100,6 @@
 
 - (ExhibitTableViewController *)viewControllerAtIndex:(NSUInteger)index {
     NSNumber* requestedPage = [NSNumber numberWithInt:(long)index % [_pages count]];
-
     return _pages[[requestedPage intValue]];
 }
 
@@ -112,6 +113,7 @@
     NSUInteger currentViewControllerIndex = [(ExhibitTableViewController *)viewController index];
     currentViewControllerIndex--;
     return [self viewControllerAtIndex:currentViewControllerIndex];
+    
 }
 
 -(void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers
@@ -128,9 +130,6 @@
 
     int currentIndex = [[self.pageController.viewControllers lastObject] index];
     currentPage_ = currentIndex;
-//    NSString *newGallery = @"Gallery: ";
-//    newGallery = [newGallery stringByAppendingString:[_pages[currentPage_] galleryName]];
-//    [[(HomeViewController*)([self.navigationController.viewControllers objectAtIndex:0]) galleryLabel] setText:newGallery];
 }
 
 - (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
